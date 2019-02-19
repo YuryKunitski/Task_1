@@ -5,7 +5,6 @@ import by.epam.javawebtraining.kunitski.task01.model.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.model.util.Reader;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 
 
