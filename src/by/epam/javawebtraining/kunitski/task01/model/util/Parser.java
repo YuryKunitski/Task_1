@@ -12,14 +12,15 @@ public class Parser {
    * @return List arguments for our objects without first value because first value isn't included
    * in our objects
    */
-  public static String[] splitLine(String lineFromFile) {
-    String[] listArgs = null;
+  public static List<String> splitLine(String lineFromFile) {
     String regex = " ";
-    listArgs = lineFromFile.split(regex);
+    String[] arrayArgs = lineFromFile.split(regex);
+    List<String> listArgs = new ArrayList<>(Arrays.asList(arrayArgs));
+
     return listArgs;
   }
 
-  public static int parseInt(String value) {
+  public static int parserInt(String value) {
     int result = 0;
     if (Validator.isValidNumber(value)) {
       result = Integer.parseInt(value);
@@ -27,7 +28,7 @@ public class Parser {
     return result;
   }
 
-  public static double parserDiuble(String value) {
+  public static double parserDouble(String value) {
     double result = 0;
     if (Validator.isValidNumber(value)) {
       result = Double.parseDouble(value);

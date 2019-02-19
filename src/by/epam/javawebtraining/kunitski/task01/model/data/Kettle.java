@@ -8,7 +8,7 @@ public class Kettle extends KitchenEquipment {
   public Kettle() {
   }
 
-  public Kettle(String firmName, double price, int power, boolean working, int volume, double minWaterLevel) {
+  public Kettle(String firmName, double price, int power, boolean working, double volume, double minWaterLevel) {
     super(firmName, price, power, working, volume);
     this.minWaterLevel = minWaterLevel;
   }
