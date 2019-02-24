@@ -8,7 +8,7 @@ public class MultiCooker extends KitchenEquipment {
   public MultiCooker() {
   }
 
-  public MultiCooker(String firmName, int price, int power, boolean working, double volume, int numbPrograms) {
+  public MultiCooker(String firmName, double price, int power, boolean working, double volume, int numbPrograms) {
     super(firmName, price, power, working, volume);
     this.numbPrograms = numbPrograms;
   }

@@ -1,30 +1,30 @@
 package by.epam.javawebtraining.kunitski.task01.controller;
 
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
-import by.epam.javawebtraining.kunitski.task01.model.creator.AbstractCreator;
-import by.epam.javawebtraining.kunitski.task01.model.creator.CreatorKettle;
-import by.epam.javawebtraining.kunitski.task01.model.data.*;
+import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
+import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
+import by.epam.javawebtraining.kunitski.task01.util.creator.*;
 import by.epam.javawebtraining.kunitski.task01.view.Printer;
-
 
 public class Main {
   public static void main(String[] args) {
     try {
+      Home homeList = new HomeList();
 
+      AbstractCreator e1 = new CreatorKettle();
+      AbstractCreator e2 = new CreatorMicrowave();
+      AbstractCreator e3 = new CreatorComputer();
+      AbstractCreator e4 = new CreatorMultiCooker();
+      AbstractCreator e5 = new CreatorTv();
 
-      Home home = new Home();
+      homeList.addEquipment(e1.create());
+      homeList.addEquipment(e2.create());
+      homeList.addEquipment(e3.create());
+      homeList.addEquipment(e4.create());
+      homeList.addEquipment(e5.create());
 
-      AbstractCreator creator1 = new CreatorKettle();
-      Equipment e1 = creator1.create();
-      Printer.print(e1);
-//      System.out.println(Calculator.calcWorkingPower(home.getEquipmentList()));
-//      System.out.println(Calculator.calcWiewingPower(home.getEquipmentList()));
-//      System.out.println(Calculator.calcKitchenPower(home.getEquipmentList()));
-//      Sort.sortPowerPriceEquipment(home.getEquipmentList());
-//      System.out.println(home);
-//      Printer.print(Finder.findMaxPower(home));
-//      Printer.print(Finder.findMinPrice(home));
-//      Printer.print(Finder.findNeedFirmName(home,"LG"));
+      Sort.sortPriceEquipment(homeList);
+      Printer.print(homeList);
     } catch (Exception e) {
       System.out.println(e);
     }

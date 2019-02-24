@@ -3,7 +3,11 @@ package by.epam.javawebtraining.kunitski.task01.model.data;
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
 
+/**
+ * The base class of my hierarchy.
+ */
 public class Equipment {
+
   private String firmName;
   private double price;
   private int power;

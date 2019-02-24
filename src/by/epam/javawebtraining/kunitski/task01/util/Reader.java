@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.model.util;
+package by.epam.javawebtraining.kunitski.task01.util;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Read from the data file, and return
+ */
 public class Reader {
 
   public static List<String> readFromFile(String path) throws FileNotFoundException {

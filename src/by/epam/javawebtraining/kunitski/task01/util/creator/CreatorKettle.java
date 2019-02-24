@@ -1,26 +1,29 @@
-package by.epam.javawebtraining.kunitski.task01.model.creator;
+package by.epam.javawebtraining.kunitski.task01.util.creator;
 
 import by.epam.javawebtraining.kunitski.task01.model.data.Kettle;
-import by.epam.javawebtraining.kunitski.task01.model.util.Parser;
-import by.epam.javawebtraining.kunitski.task01.model.util.Reader;
+import by.epam.javawebtraining.kunitski.task01.util.Parser;
+import by.epam.javawebtraining.kunitski.task01.util.Reader;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Виктор Викторович посмотрите пожалуйста можно ли делать фабрику таким образом??
+ * Read the data from file (PATH_FILE), next split necessary line and put it in listArgs,
+ * next parse each value (value is validated in class Parser!) and create required equipment.
  */
 
 public class CreatorKettle implements AbstractCreator {
 
   @Override
   public Kettle create() throws FileNotFoundException {
-    List<String> listString = Reader.readFromFile(AbstractCreator.path);
+
+    List<String> listString = Reader.readFromFile(AbstractCreator.PATH_FILE);
     List<String> listArgs = new ArrayList<>();
-    for (int i = 0; i < listString.size(); i++) {
-      if (listString.get(i).contains("Kettle")) {
-        listArgs = Parser.splitLine(listString.get(i));
+
+    for (String line : listString) {
+      if (line.contains("Kettle")) {
+        listArgs = Parser.splitLine(line);
       }
     }
     String arg1 = null;
@@ -36,10 +39,8 @@ public class CreatorKettle implements AbstractCreator {
     arg4 = Parser.parserBoolen(listArgs.get(4));
     arg5 = Parser.parserDouble(listArgs.get(5));
     arg6 = Parser.parserDouble(listArgs.get(6));
-      
-    Kettle kettle = new Kettle(arg1, arg2, arg3, arg4, arg5, arg6);
 
-    return kettle;
+    return new Kettle(arg1, arg2, arg3, arg4, arg5, arg6);
   }
 }
 

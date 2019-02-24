@@ -6,7 +6,7 @@ public class Microwave extends KitchenEquipment {
   public Microwave() {
   }
 
-  public Microwave(String firmName, int price, int power, boolean working, double volume, boolean touchControl) {
+  public Microwave(String firmName, double price, int power, boolean working, double volume, boolean touchControl) {
     super(firmName, price, power, working, volume);
     this.touchControl = touchControl;
   }
@@ -44,6 +44,6 @@ public class Microwave extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":"+ super.toString() +", touchControl=" +touchControl;
+    return getClass().getSimpleName() + ":" + super.toString() + ", touchControl=" + touchControl;
   }
 }

@@ -5,12 +5,15 @@ import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.data.KitchenEquipment;
 import by.epam.javawebtraining.kunitski.task01.model.data.ViewingEquipment;
 
+/**
+ * This class calculates the required values.
+ */
 public class Calculator {
 
   public static int calcSumPower(Home home) {
     int counter = 0;
-    if (home.getEquipmentList() != null) {
-      for (Equipment e : home.getEquipmentList()) {
+    if (home != null) {
+      for (Equipment e : home.getEquipment()) {
         counter += e.getPower();
       }
     }
@@ -19,8 +22,8 @@ public class Calculator {
 
   public static int calcWorkingPower(Home home) {
     int counter = 0;
-    if (home.getEquipmentList() != null) {
-      for (Equipment e : home.getEquipmentList()) {
+    if (home != null) {
+      for (Equipment e : home.getEquipment()) {
         if (e.isWorking()) {
           counter += e.getPower();
         }
@@ -31,8 +34,8 @@ public class Calculator {
 
   public static int calcKitchenPower(Home home) {
     int counter = 0;
-    if (home.getEquipmentList() != null) {
-      for (Equipment e : home.getEquipmentList()) {
+    if (home != null) {
+      for (Equipment e : home.getEquipment()) {
         if (e instanceof KitchenEquipment) {
           counter += e.getPower();
         }
@@ -43,8 +46,8 @@ public class Calculator {
 
   public static int calcWiewingPower(Home home) {
     int counter = 0;
-    if (home.getEquipmentList() != null) {
-      for (Equipment e : home.getEquipmentList()) {
+    if (home != null) {
+      for (Equipment e : home.getEquipment()) {
         if (e instanceof ViewingEquipment) {
           counter += e.getPower();
         }
@@ -53,10 +56,10 @@ public class Calculator {
     return counter;
   }
 
-  public static int allPrice(Home home) {
+  public static int calcAllPrice(Home home) {
     int counter = 0;
-    if (home.getEquipmentList() != null) {
-      for (Equipment e : home.getEquipmentList()) {
+    if (home != null) {
+      for (Equipment e : home.getEquipment()) {
         counter += e.getPrice();
       }
     }

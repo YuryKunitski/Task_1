@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.model.util;
+package by.epam.javawebtraining.kunitski.task01.util;
 
 
 public class Validator {

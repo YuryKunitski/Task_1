@@ -5,10 +5,14 @@ import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyEx
 public class Tv extends ViewingEquipment {
   private TypeTV typeTV;
 
+  public enum TypeTV {
+    COSMOSTV, ZALA, VOKATV, BELTELECOM
+  }
+
   public Tv() {
   }
 
-  public Tv(String firmName, int price, int power, boolean working, int sizeDisplay, TypeTV typeTV) {
+  public Tv(String firmName, double price, int power, boolean working, int sizeDisplay, TypeTV typeTV) {
     super(firmName, price, power, working, sizeDisplay);
     this.typeTV = typeTV;
   }
@@ -48,8 +52,10 @@ public class Tv extends ViewingEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":"+  super.toString() + ", TypeTV=" + typeTV;
+    return getClass().getSimpleName() + ":" + super.toString() + ", TypeTV=" + typeTV;
   }
 }
+
+
 
 

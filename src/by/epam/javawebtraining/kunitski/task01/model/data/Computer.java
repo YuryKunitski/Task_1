@@ -8,7 +8,7 @@ public class Computer extends ViewingEquipment {
   public Computer() {
   }
 
-  public Computer(String firmName, int price, int power, boolean working, int sizeDisplay, int ram) {
+  public Computer(String firmName, double price, int power, boolean working, int sizeDisplay, int ram) {
     super(firmName, price, power, working, sizeDisplay);
     this.ram = ram;
   }

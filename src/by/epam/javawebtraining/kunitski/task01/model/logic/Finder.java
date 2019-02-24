@@ -4,74 +4,71 @@ import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
 
-import java.util.List;
-
+/**
+ * This class find the required equipments according to their parameters.
+ * Throwing my own exceptions I can show my knowledge in it.
+ * Methods: findNeedPrice and findNeedPower I made public because they may be used in controller.
+ */
 public class Finder {
   public static Equipment findMaxPrice(Home home) throws NullReferenceMyException {
-    if (home.getEquipmentList() == null) {
+    if (home == null) {
       throw new NullReferenceMyException();
     }
     double max = 0;
-    Equipment result = null;
-    for (Equipment e : home.getEquipmentList()) {
+    for (Equipment e : home.getEquipment()) {
       if (e.getPrice() > max) {
         max = e.getPrice();
       }
     }
-    result = findNeedPrice(home, max);
-    return result;
+    return findNeedPrice(home, max);
   }
 
   public static Equipment findMinPrice(Home home) throws NullReferenceMyException {
-    if (home.getEquipmentList() == null) {
+    if (home == null) {
       throw new NullReferenceMyException();
     }
-    double min = home.getEquipmentList().get(0).getPrice();
-    Equipment result = null;
-    for (Equipment e : home.getEquipmentList()) {
+    double min = 0;
+    for (Equipment e : home.getEquipment()) {
       if (e.getPrice() < min) {
         min = e.getPrice();
       }
     }
-    result = findNeedPrice(home, min);
-    return result;
+    return findNeedPrice(home, min);
   }
 
   public static Equipment findMaxPower(Home home) throws NullReferenceMyException {
-    if (home.getEquipmentList() == null) {
+    if (home.getEquipment() == null) {
       throw new NullReferenceMyException();
     }
     int max = 0;
-    Equipment result = null;
-    for (Equipment e : home.getEquipmentList()) {
+    for (Equipment e : home.getEquipment()) {
       if (e.getPower() > max) {
         max = e.getPower();
       }
     }
-    result = findNeedPower(home, max);
-    return result;
+    return findNeedPower(home, max);
   }
 
   public static Equipment findMinPower(Home home) throws NullReferenceMyException {
-    if (home.getEquipmentList() == null) {
+    if (home.getEquipment() == null) {
       throw new NullReferenceMyException();
     }
-    int min = home.getEquipmentList().get(0).getPower();
-    Equipment result = null;
-    for (Equipment e : home.getEquipmentList()) {
+    int min = 0;
+    for (Equipment e : home.getEquipment()) {
       if (e.getPower() < min) {
         min = e.getPower();
       }
     }
-    result = findNeedPower(home, min);
-    return result;
+    return findNeedPower(home, min);
   }
 
   public static Equipment findNeedPrice(Home home, double value) {
     Equipment findEquipment = null;
-    for (Equipment e : home.getEquipmentList()) {
-      if (e.getPrice() == value) {
-        findEquipment = e;
+    if (home != null && value > 0) {
+      for (Equipment e : home.getEquipment()) {
+        if (e.getPrice() == value) {
+          findEquipment = e;
+        }
       }
     }
     return findEquipment;
@@ -79,9 +76,11 @@ public class Finder {
 
   public static Equipment findNeedPower(Home home, int value) {
     Equipment findEquipment = null;
-    for (Equipment e : home.getEquipmentList()) {
-      if (e.getPower() == value) {
-        findEquipment = e;
+    if (home != null && value > 0) {
+      for (Equipment e : home.getEquipment()) {
+        if (e.getPower() == value) {
+          findEquipment = e;
+        }
       }
     }
     return findEquipment;
@@ -89,9 +88,11 @@ public class Finder {
 
   public static Equipment findNeedFirmName(Home home, String value) {
     Equipment findEquipment = null;
-    for (Equipment e : home.getEquipmentList()) {
-      if (e.getFirmName().equals(value)) {
-        findEquipment = e;
+    if (home != null && value != null) {
+      for (Equipment e : home.getEquipment()) {
+        if (e.getFirmName().equals(value)) {
+          findEquipment = e;
+        }
       }
     }
     return findEquipment;

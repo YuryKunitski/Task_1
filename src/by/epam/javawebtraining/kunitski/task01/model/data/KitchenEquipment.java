@@ -2,6 +2,9 @@ package by.epam.javawebtraining.kunitski.task01.model.data;
 
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 
+/**
+ * The base class for all kitchen equipments.
+ */
 public class KitchenEquipment extends Equipment {
   private double volume;
 

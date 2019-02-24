@@ -2,13 +2,16 @@ package by.epam.javawebtraining.kunitski.task01.model.data;
 
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 
+/**
+ * The base class for all viewing equipments.
+ */
 public class ViewingEquipment extends Equipment {
   private int sizeDisplay;
 
   public ViewingEquipment() {
   }
 
-  public ViewingEquipment(String firmName, int price, int power, boolean working, int sizeDisplay) {
+  public ViewingEquipment(String firmName, double price, int power, boolean working, int sizeDisplay) {
     super(firmName, price, power, working);
     this.sizeDisplay = sizeDisplay;
   }

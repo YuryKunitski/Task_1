@@ -1,6 +1,6 @@
-package by.epam.javawebtraining.kunitski.task01.model.util;
+package by.epam.javawebtraining.kunitski.task01.util;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.TypeTV;
+import by.epam.javawebtraining.kunitski.task01.model.data.Tv;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,9 +15,7 @@ public class Parser {
   public static List<String> splitLine(String lineFromFile) {
     String regex = " ";
     String[] arrayArgs = lineFromFile.split(regex);
-    List<String> listArgs = new ArrayList<>(Arrays.asList(arrayArgs));
-
-    return listArgs;
+    return new ArrayList<>(Arrays.asList(arrayArgs));
   }
 
   public static int parserInt(String value) {
@@ -44,10 +42,10 @@ public class Parser {
     return result;
   }
 
-  public static TypeTV parserTypeTv(String value) {
-    TypeTV result = null;
+  public static Tv.TypeTV parserTypeTv(String value) {
+    Tv.TypeTV result = null;
     if (Validator.isValidTypeTv(value)) {
-      result = TypeTV.valueOf(value.toUpperCase());
+      result = Tv.TypeTV.valueOf(value.toUpperCase());
     }
     return result;
   }
