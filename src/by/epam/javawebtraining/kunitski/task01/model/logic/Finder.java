@@ -15,7 +15,7 @@ public class Finder {
       throw new NullReferenceMyException();
     }
     double max = 0;
-    for (Equipment e : home.getEquipment()) {
+    for (Equipment e : ParserHome.getArray(home)) {
       if (e.getPrice() > max) {
         max = e.getPrice();
       }
@@ -28,7 +28,7 @@ public class Finder {
       throw new NullReferenceMyException();
     }
     double min = 0;
-    for (Equipment e : home.getEquipment()) {
+    for (Equipment e : ParserHome.getArray(home)) {
       if (e.getPrice() < min) {
         min = e.getPrice();
       }
@@ -41,7 +41,7 @@ public class Finder {
       throw new NullReferenceMyException();
     }
     int max = 0;
-    for (Equipment e : home.getEquipment()) {
+    for (Equipment e : ParserHome.getArray(home)) {
       if (e.getPower() > max) {
         max = e.getPower();
       }
@@ -54,7 +54,7 @@ public class Finder {
       throw new NullReferenceMyException();
     }
     int min = 0;
-    for (Equipment e : home.getEquipment()) {
+    for (Equipment e : ParserHome.getArray(home)) {
       if (e.getPower() < min) {
         min = e.getPower();
       }
@@ -65,7 +65,7 @@ public class Finder {
   public static Equipment findNeedPrice(Home home, double value) {
     Equipment findEquipment = null;
     if (home != null && value > 0) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e.getPrice() == value) {
           findEquipment = e;
         }
@@ -77,7 +77,7 @@ public class Finder {
   public static Equipment findNeedPower(Home home, int value) {
     Equipment findEquipment = null;
     if (home != null && value > 0) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e.getPower() == value) {
           findEquipment = e;
         }
@@ -89,7 +89,7 @@ public class Finder {
   public static Equipment findNeedFirmName(Home home, String value) {
     Equipment findEquipment = null;
     if (home != null && value != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e.getFirmName().equals(value)) {
           findEquipment = e;
         }

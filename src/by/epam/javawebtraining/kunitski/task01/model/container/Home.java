@@ -4,12 +4,11 @@ import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 
 /**
- * This I want to create universal container for collection and array,
- * but I can not do exactly method "getEquipment()"
+ * This a universal container for collection and array.
  */
-public interface Home {
+public interface Home<T> {
 
-  <T> T getEquipment();
+   T getEquipment();
 
   Equipment getEquipment(int index) throws CorrectDataMyException;
 

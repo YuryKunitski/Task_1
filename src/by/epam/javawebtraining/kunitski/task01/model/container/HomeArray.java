@@ -5,9 +5,9 @@ import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyExce
 
 import java.util.Arrays;
 
-public class HomeArray implements Home {
+public class HomeArray implements Home<Equipment[]> {
 
-  public static final int LENGTH_DEFOULT = 6;
+  public static final int LENGTH_DEFOULT = 5;
   private int length;
   private int currentIndex = 0;
   private Equipment[] equipmentArray;
@@ -58,7 +58,7 @@ public class HomeArray implements Home {
   public void removeEquipment(Equipment oldEquipment) {
     if (oldEquipment != null) {
       for (int i = 0; i < length; i++) {
-        if (oldEquipment.equals(equipmentArray[i])){
+        if (oldEquipment.equals(equipmentArray[i])) {
           equipmentArray[i] = null;
         }
       }
@@ -84,4 +84,14 @@ public class HomeArray implements Home {
     result = 31 * result + Arrays.hashCode(equipmentArray);
     return result;
   }
+
+  @Override
+  public String toString() {
+    StringBuilder result = new StringBuilder("EquipmentArray:\n");
+    for (Equipment e : equipmentArray) {
+      result.append(String.valueOf(e)).append("\n");
+    }
+    return result.toString();
+  }
 }
+

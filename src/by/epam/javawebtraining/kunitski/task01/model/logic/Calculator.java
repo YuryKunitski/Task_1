@@ -13,7 +13,7 @@ public class Calculator {
   public static int calcSumPower(Home home) {
     int counter = 0;
     if (home != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         counter += e.getPower();
       }
     }
@@ -23,7 +23,7 @@ public class Calculator {
   public static int calcWorkingPower(Home home) {
     int counter = 0;
     if (home != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e.isWorking()) {
           counter += e.getPower();
         }
@@ -35,7 +35,7 @@ public class Calculator {
   public static int calcKitchenPower(Home home) {
     int counter = 0;
     if (home != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e instanceof KitchenEquipment) {
           counter += e.getPower();
         }
@@ -47,7 +47,7 @@ public class Calculator {
   public static int calcWiewingPower(Home home) {
     int counter = 0;
     if (home != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         if (e instanceof ViewingEquipment) {
           counter += e.getPower();
         }
@@ -59,7 +59,7 @@ public class Calculator {
   public static int calcAllPrice(Home home) {
     int counter = 0;
     if (home != null) {
-      for (Equipment e : home.getEquipment()) {
+      for (Equipment e : ParserHome.getArray(home)) {
         counter += e.getPrice();
       }
     }

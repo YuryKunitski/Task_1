@@ -6,7 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyExce
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeList implements Home {
+public class HomeList implements Home<List<Equipment>> {
 
   private List<Equipment> equipmentList;
 
@@ -18,10 +18,6 @@ public class HomeList implements Home {
     this.equipmentList = equipmentList;
   }
 
-  /**
-   * I can not understand why I can not do method "getEquipment" this way.
-   * @return
-   */
   @Override
   public List<Equipment> getEquipment() {
     return equipmentList;

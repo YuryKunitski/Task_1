@@ -1,16 +1,19 @@
 package by.epam.javawebtraining.kunitski.task01.model.test;
 
+import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
 import by.epam.javawebtraining.kunitski.task01.model.data.*;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.data.Tv.TypeTV.*;
-import static org.junit.Assert.*;
+import java.util.List;
+
+import static by.epam.javawebtraining.kunitski.task01.model.data.Tv.TypeTV.ZALA;
+import static org.junit.Assert.assertEquals;
 
 public class SortTest {
-  private HomeList homeActual;
+  private Home<List<Equipment>> homeActual;
 
   Equipment e1;
   Equipment e2;
@@ -37,7 +40,7 @@ public class SortTest {
 
   @Test
   public void sortPowerEquipment() {
-    HomeList homeExpected = new HomeList();
+    Home<List<Equipment>> homeExpected = new HomeList();
 
     homeExpected.addEquipment(e5);
     homeExpected.addEquipment(e3);
@@ -51,7 +54,7 @@ public class SortTest {
 
   @Test
   public void sortPriceEquipment() {
-    HomeList homeExpected = new HomeList();
+    Home<List<Equipment>> homeExpected = new HomeList();
 
     homeExpected.addEquipment(e1);
     homeExpected.addEquipment(e4);
@@ -65,7 +68,7 @@ public class SortTest {
 
   @Test
   public void sortPricePowerEquipment() {
-    HomeList homeExpected = new HomeList();
+    Home<List<Equipment>> homeExpected = new HomeList();
 
     homeExpected.addEquipment(e4);
     homeExpected.addEquipment(e1);
