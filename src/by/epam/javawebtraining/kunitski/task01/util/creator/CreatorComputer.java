@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.util.creator;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.Computer;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Computer;
 import by.epam.javawebtraining.kunitski.task01.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.util.Reader;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Read the data from file (PATH_FILE), next split necessary line and put it in listArgs,
+ * Read the entity from file (PATH_FILE), next split necessary line and put it in listArgs,
  * next parse each value (value is validated in class Parser!) and create required equipment.
  */
 public class CreatorComputer implements AbstractCreator {

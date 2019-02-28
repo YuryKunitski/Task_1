@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.model.data;
+package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;

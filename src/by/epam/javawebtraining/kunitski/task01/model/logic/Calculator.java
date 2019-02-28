@@ -1,9 +1,9 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
-import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
-import by.epam.javawebtraining.kunitski.task01.model.data.KitchenEquipment;
-import by.epam.javawebtraining.kunitski.task01.model.data.ViewingEquipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.KitchenEquipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.ViewingEquipment;
 
 /**
  * This class calculates the required values.

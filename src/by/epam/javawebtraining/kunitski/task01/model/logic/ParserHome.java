@@ -3,7 +3,7 @@ package by.epam.javawebtraining.kunitski.task01.model.logic;
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeArray;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
-import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
 public class ParserHome {
 

@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
 import java.util.Comparator;
 

@@ -1,13 +1,13 @@
-package by.epam.javawebtraining.kunitski.task01.model.test;
+package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
-import by.epam.javawebtraining.kunitski.task01.model.data.*;
-import by.epam.javawebtraining.kunitski.task01.model.logic.Calculator;
+import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import org.junit.Before;
+import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.data.Tv.TypeTV.*;
-import static org.junit.Assert.*;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TypeTV.ZALA;
+import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
   private Home home;
@@ -29,14 +29,21 @@ public class CalculatorTest {
 
   }
 
-  @org.junit.Test
+  @Test
   public void calcSumPower() {
     int actual = Calculator.calcSumPower(home);
     int expected = 5000;
     assertEquals(expected, actual);
   }
 
-  @org.junit.Test
+  @Test
+  public void calcSumPowerByNull() {
+    int actual = Calculator.calcSumPower(home = null);
+    int expected = 0;
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void calcWorkingPower() {
 
     int actual = Calculator.calcWorkingPower(home);
@@ -44,7 +51,15 @@ public class CalculatorTest {
     assertEquals(expected, actual);
   }
 
-  @org.junit.Test
+  @Test
+  public void calcWorkingPowerByNull() {
+
+    int actual = Calculator.calcWorkingPower(home = null);
+    int expected = 0;
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void calcKitchenPower() {
 
     int actual = Calculator.calcKitchenPower(home);
@@ -52,7 +67,15 @@ public class CalculatorTest {
     assertEquals(expected, actual);
   }
 
-  @org.junit.Test
+  @Test
+  public void calcKitchenPowerByNull() {
+
+    int actual = Calculator.calcKitchenPower(home = null);
+    int expected = 0;
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void calcWiewingPower() {
 
     int actual = Calculator.calcWiewingPower(home);
@@ -60,11 +83,27 @@ public class CalculatorTest {
     assertEquals(expected, actual);
   }
 
-  @org.junit.Test
+  @Test
+  public void calcWiewingPowerByNull() {
+
+    int actual = Calculator.calcWiewingPower(home = null);
+    int expected = 0;
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void calcAllPrice() {
 
     int actual = Calculator.calcAllPrice(home);
     int expected = 500;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void calcAllPriceByNull() {
+
+    int actual = Calculator.calcAllPrice(home = null);
+    int expected = 0;
     assertEquals(expected, actual);
   }
 }

@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.model.data;
+package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 public class Microwave extends KitchenEquipment {
   private boolean touchControl;

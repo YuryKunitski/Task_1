@@ -1,18 +1,18 @@
-package by.epam.javawebtraining.kunitski.task01.model.test;
+package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
-import by.epam.javawebtraining.kunitski.task01.model.data.*;
-import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
+import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
-import static by.epam.javawebtraining.kunitski.task01.model.data.Tv.TypeTV.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TypeTV.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class SortTest {
+
   private Home<List<Equipment>> homeActual;
 
   Equipment e1;

@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.container;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 
 /**

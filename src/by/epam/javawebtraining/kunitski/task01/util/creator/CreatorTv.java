@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.util.creator;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.Tv;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Tv;
 import by.epam.javawebtraining.kunitski.task01.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.util.Reader;
 

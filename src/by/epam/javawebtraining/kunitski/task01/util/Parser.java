@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.util;
 
-import by.epam.javawebtraining.kunitski.task01.model.data.Tv;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Tv;
 
 import java.util.ArrayList;
 import java.util.Arrays;
