@@ -48,8 +48,15 @@ public class HomeList implements Home<List<Equipment>> {
 
   @Override
   public void removeEquipment(Equipment oldEquipment) {
-    if (equipmentList.contains(oldEquipment)) {
+    if (oldEquipment != null) {
       equipmentList.remove(oldEquipment);
+    }
+  }
+
+  @Override
+  public void removeEquipment(int index) {
+    if (index >= 0) {
+      equipmentList.remove(index);
     }
   }
 

@@ -17,4 +17,6 @@ public interface Home<T> {
   void addEquipment(Equipment newEquipment);
 
   void removeEquipment(Equipment oldEquipment);
+
+  void removeEquipment(int index);
 }

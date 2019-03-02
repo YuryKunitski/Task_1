@@ -5,9 +5,12 @@ import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyExce
 
 import java.util.Arrays;
 
+/**
+ * Container of dynamic array
+ */
 public class HomeArray implements Home<Equipment[]> {
 
-  public static final int LENGTH_DEFOULT = 5;
+  public static final int LENGTH_DEFOULT = 0;
   private int length;
   private int currentIndex = 0;
   private Equipment[] equipmentArray;
@@ -47,9 +50,12 @@ public class HomeArray implements Home<Equipment[]> {
   }
 
   @Override
-  public void addEquipment(Equipment newEquipment) {
-    if (newEquipment != null && currentIndex >= 0 && currentIndex < length) {
-      equipmentArray[currentIndex] = newEquipment;
+  public void addEquipment(Equipment otherEquipment) {
+    if (otherEquipment != null) {
+      if (currentIndex >= length) {
+        equipmentArray = Arrays.copyOf(equipmentArray, ++length);
+      }
+      equipmentArray[currentIndex] = otherEquipment;
       currentIndex++;
     }
   }
@@ -57,12 +63,29 @@ public class HomeArray implements Home<Equipment[]> {
   @Override
   public void removeEquipment(Equipment oldEquipment) {
     if (oldEquipment != null) {
+
       for (int i = 0; i < length; i++) {
-        if (oldEquipment.equals(equipmentArray[i])) {
-          equipmentArray[i] = null;
+        if (equipmentArray[i].equals(oldEquipment)) {
+          fastRemove(i);
         }
       }
+
     }
+  }
+
+  @Override
+  public void removeEquipment(int index) {
+    if (index >= 0) {
+      fastRemove(index);
+    }
+  }
+
+  private void fastRemove(int index) {
+
+    int numMoved = length - index - 1;
+
+    System.arraycopy(equipmentArray, index + 1, equipmentArray, index, numMoved);
+    equipmentArray = Arrays.copyOf(equipmentArray, --length);
   }
 
   @Override
