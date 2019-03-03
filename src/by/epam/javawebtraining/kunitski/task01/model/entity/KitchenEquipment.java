@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongVolumeLogicException;
 
 /**
  * The base class for all kitchen equipments.
@@ -25,9 +25,9 @@ public class KitchenEquipment extends Equipment {
     return volume;
   }
 
-  public void setVolume(double volume) throws CorrectDataMyException {
+  public void setVolume(double volume) throws WrongVolumeLogicException {
     if (volume <= 0) {
-      throw new CorrectDataMyException("Incorrect value of volume");
+      throw new WrongVolumeLogicException("Incorrect value of volume");
     }
     this.volume = volume;
   }

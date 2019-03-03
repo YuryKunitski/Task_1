@@ -1,7 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.container;
 
+import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +24,10 @@ public class HomeList implements Home<List<Equipment>> {
   }
 
   @Override
-  public Equipment getEquipment(int index) throws CorrectDataMyException {
+  public Equipment getEquipment(int index) throws WrongIndexHomeException {
 
     if (index < 0 || index >= equipmentList.size()) {
-      throw new CorrectDataMyException("Incorrect index");
+      throw new WrongIndexHomeException("Incorrect index");
     }
     return equipmentList.get(index);
   }

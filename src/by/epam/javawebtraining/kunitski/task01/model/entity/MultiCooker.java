@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongNumbProgramsLogicException;
 
 public class MultiCooker extends KitchenEquipment {
   private int numbPrograms;
@@ -22,8 +22,9 @@ public class MultiCooker extends KitchenEquipment {
     return numbPrograms;
   }
 
-  public void setNumbPrograms(int numbPrograms) throws CorrectDataMyException {
-    if (numbPrograms <= 0 ){throw new CorrectDataMyException("Incorrect value of numbPrograms");
+  public void setNumbPrograms(int numbPrograms) throws WrongNumbProgramsLogicException {
+    if (numbPrograms <= 0) {
+      throw new WrongNumbProgramsLogicException("Incorrect value of numbPrograms");
     }
     this.numbPrograms = numbPrograms;
   }
@@ -48,6 +49,6 @@ public class MultiCooker extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":"+  super.toString() + ", numbPrograms=" + numbPrograms;
+    return getClass().getSimpleName() + ":" + super.toString() + ", numbPrograms=" + numbPrograms;
   }
 }

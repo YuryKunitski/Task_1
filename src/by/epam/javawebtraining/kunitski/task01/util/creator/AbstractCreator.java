@@ -1,8 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.util.creator;
 
+import by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
-
-import java.io.FileNotFoundException;
 
 /**
  * Base interface for all creators.
@@ -10,7 +9,7 @@ import java.io.FileNotFoundException;
  */
 public interface AbstractCreator {
 
-  String PATH_FILE = "src//file//data.txt";
+  String DATA_PATH = "src//file//data.txt";
 
-  Equipment create() throws FileNotFoundException;
+  Equipment create() throws WrongDataPathTechnicalException;
 }

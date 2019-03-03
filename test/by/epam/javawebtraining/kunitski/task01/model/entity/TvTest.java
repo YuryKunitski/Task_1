@@ -1,12 +1,11 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
+import by.epam.javawebtraining.kunitski.task01.exception.*;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TypeTV;
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
-import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class TvTest {
   private Tv tvActual;
@@ -18,48 +17,48 @@ public class TvTest {
 
 
   @Test
-  public void setFirmName() throws NullReferenceMyException {
+  public void setFirmName() throws WrongFirmNameLogicException {
     Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TypeTV.ZALA);
     tvActual.setFirmName("Atlant");
     assertEquals(tvExpected.getFirmName(), tvActual.getFirmName());
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void setFirmNameByException() throws NullReferenceMyException {
+  @Test(expected = WrongFirmNameLogicException.class)
+  public void setFirmNameByException() throws WrongFirmNameLogicException {
     tvActual.setFirmName(null);
   }
 
   @Test
-  public void setPrice() throws CorrectDataMyException {
+  public void setPrice() throws WrongPriceLogicException {
     Tv tvExpected = new Tv("Atlant", 100, 100, true, 52, TypeTV.ZALA);
     tvActual.setPrice(100);
     assertEquals(tvExpected.getPrice(), tvActual.getPrice(), 0.0000001);
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setPriceByExceptionZero() throws CorrectDataMyException {
+  @Test(expected = WrongPriceLogicException.class)
+  public void setPriceByExceptionZero() throws WrongPriceLogicException {
     tvActual.setPrice(0);
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setPriceByExceptionNegativ() throws CorrectDataMyException {
+  @Test(expected = WrongPriceLogicException.class)
+  public void setPriceByExceptionNegativ() throws WrongPriceLogicException {
     tvActual.setPrice(-100);
   }
 
   @Test
-  public void setPower() throws CorrectDataMyException {
+  public void setPower() throws WrongPowerLogicException {
     Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TypeTV.ZALA);
     tvActual.setPower(100);
     assertEquals(tvExpected.getPower(), tvActual.getPower());
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setPowerByExceptionZero() throws CorrectDataMyException {
+  @Test(expected = WrongPowerLogicException.class)
+  public void setPowerByExceptionZero() throws WrongPowerLogicException {
     tvActual.setPower(0);
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setPowerByExceptionNegativ() throws CorrectDataMyException {
+  @Test(expected = WrongPowerLogicException.class)
+  public void setPowerByExceptionNegativ() throws WrongPowerLogicException {
     tvActual.setPower(-100);
   }
 
@@ -71,31 +70,31 @@ public class TvTest {
   }
 
   @Test
-  public void setSizeDisplay() throws CorrectDataMyException {
+  public void setSizeDisplay() throws WrongSizeDisplayLogicException {
     Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TypeTV.ZALA);
     tvActual.setSizeDisplay(36);
     assertEquals(tvExpected.getSizeDisplay(), tvActual.getSizeDisplay());
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setSizeDisplayByExceptionZero() throws CorrectDataMyException {
+  @Test(expected = WrongSizeDisplayLogicException.class)
+  public void setSizeDisplayByExceptionZero() throws WrongSizeDisplayLogicException {
     tvActual.setSizeDisplay(0);
   }
 
-  @Test(expected = CorrectDataMyException.class)
-  public void setSizeDisplayByExceptionNegativ() throws CorrectDataMyException {
+  @Test(expected = WrongSizeDisplayLogicException.class)
+  public void setSizeDisplayByExceptionNegativ() throws WrongSizeDisplayLogicException {
     tvActual.setSizeDisplay(-36);
   }
 
   @Test
-  public void setTypeTV() throws NullReferenceMyException {
+  public void setTypeTV() throws WrongTypeTVLogicException {
     Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TypeTV.ZALA);
     tvActual.setTypeTV(TypeTV.ZALA);
     assertEquals(tvExpected.getTypeTV(), tvActual.getTypeTV());
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void setTypeTVByException() throws NullReferenceMyException {
+  @Test(expected = WrongTypeTVLogicException.class)
+  public void setTypeTVByException() throws WrongTypeTVLogicException {
     tvActual.setTypeTV(null);
   }
 }

@@ -37,7 +37,8 @@ public class Main {
       Printer.print("Sorted by price and power - " + homeList+"\n");
       Sort.sortPowerEquipment(homeList);
       Printer.print("Sorted by only power - " + homeList+"\n");
-    } catch (Exception e) {
+    }
+    catch (Exception e) {
       System.out.println(e);
     }
   }

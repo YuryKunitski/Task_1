@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongTypeTVLogicException;
 
 public class Tv extends ViewingEquipment {
   private TypeTV typeTV;
@@ -25,9 +25,9 @@ public class Tv extends ViewingEquipment {
     return typeTV;
   }
 
-  public void setTypeTV(TypeTV typeTV) throws NullReferenceMyException {
+  public void setTypeTV(TypeTV typeTV) throws WrongTypeTVLogicException {
     if (typeTV == null) {
-      throw new NullReferenceMyException("Incorrect value of TypeTV");
+      throw new WrongTypeTVLogicException("Incorrect value of TypeTV");
     }
     this.typeTV = typeTV;
   }

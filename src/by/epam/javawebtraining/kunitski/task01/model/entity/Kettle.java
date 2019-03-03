@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongMinWaterLavelLogicException;
 
 public class Kettle extends KitchenEquipment {
   private double minWaterLevel;
@@ -22,9 +22,9 @@ public class Kettle extends KitchenEquipment {
     return minWaterLevel;
   }
 
-  public void setMinWaterLevel(double minWaterLevel) throws CorrectDataMyException {
+  public void setMinWaterLevel(double minWaterLevel) throws WrongMinWaterLavelLogicException {
     if (minWaterLevel <= 0) {
-      throw new CorrectDataMyException("Incorrect value of minWaterLevel");
+      throw new WrongMinWaterLavelLogicException("Incorrect value of minWaterLevel");
     }
     this.minWaterLevel = minWaterLevel;
   }

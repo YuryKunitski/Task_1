@@ -1,9 +1,9 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
+import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
-import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,51 +31,51 @@ public class FinderTest {
   }
 
   @Test
-  public void findMaxPrice() throws NullReferenceMyException {
+  public void findMaxPrice() throws NullHomeLogicException {
     Equipment actual = Finder.findMaxPrice(home);
     Equipment expected = new Tv("Sumsung", 2000, 1800, true, 2, ZALA);
     assertEquals(expected, actual);
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void findMaxPriceByException() throws NullReferenceMyException {
+  @Test(expected = NullHomeLogicException.class)
+  public void findMaxPriceByException() throws NullHomeLogicException {
     Equipment actual = Finder.findMaxPrice(home = null);
   }
 
   @Test
-  public void findMinPrice() throws NullReferenceMyException {
+  public void findMinPrice() throws NullHomeLogicException {
     Equipment actual = Finder.findMinPrice(home);
     Equipment expected =  new Kettle("LG", 100, 3000, false, 2, 0.3);
     assertEquals(expected, actual);
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void findMinPriceByNull() throws NullReferenceMyException {
+  @Test(expected = NullHomeLogicException.class)
+  public void findMinPriceByNull() throws NullHomeLogicException {
     Equipment actual = Finder.findMinPrice(home = null);
 
   }
 
   @Test
-  public void findMaxPower() throws NullReferenceMyException {
+  public void findMaxPower() throws NullHomeLogicException {
     Equipment actual = Finder.findMaxPower(home);
     Equipment expected = new Kettle("LG", 100, 3000, false, 2, 0.3);
     assertEquals(expected, actual);
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void findMaxPowerByException() throws NullReferenceMyException {
+  @Test(expected = NullHomeLogicException.class)
+  public void findMaxPowerByException() throws NullHomeLogicException {
     Equipment actual = Finder.findMaxPower(home = null);
   }
 
   @Test
-  public void findMinPower() throws NullReferenceMyException {
+  public void findMinPower() throws NullHomeLogicException {
     Equipment actual = Finder.findMinPower(home);
     Equipment expected = new Computer("LG", 1000, 500, true, 2, 2048);
     assertEquals(expected, actual);
   }
 
-  @Test(expected = NullReferenceMyException.class)
-  public void findMinPowerByException() throws NullReferenceMyException {
+  @Test(expected = NullHomeLogicException.class)
+  public void findMinPowerByException() throws NullHomeLogicException {
     Equipment actual = Finder.findMinPower(home = null);
   }
 

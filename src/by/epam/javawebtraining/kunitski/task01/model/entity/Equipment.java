@@ -1,7 +1,8 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
-import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongFirmNameLogicException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongPowerLogicException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongPriceLogicException;
 
 /**
  * The base class of my hierarchy.
@@ -47,23 +48,23 @@ public class Equipment {
     return working;
   }
 
-  public void setFirmName(String firmName) throws NullReferenceMyException {
+  public void setFirmName(String firmName) throws WrongFirmNameLogicException {
     if (firmName == null) {
-      throw new NullReferenceMyException("Firm's name - null");
+      throw new WrongFirmNameLogicException("Firm's name - null");
     }
     this.firmName = firmName;
   }
 
-  public void setPrice(double price) throws CorrectDataMyException {
+  public void setPrice(double price) throws WrongPriceLogicException {
     if (price <= 0) {
-      throw new CorrectDataMyException("Incorrect value of price");
+      throw new WrongPriceLogicException("Incorrect value of price");
     }
     this.price = price;
   }
 
-  public void setPower(int power) throws CorrectDataMyException {
+  public void setPower(int power) throws WrongPowerLogicException {
     if (power <= 0) {
-      throw new CorrectDataMyException("Incorrect value of power");
+      throw new WrongPowerLogicException("Incorrect value of power");
     }
     this.power = power;
   }

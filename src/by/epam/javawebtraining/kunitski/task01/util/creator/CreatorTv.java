@@ -1,23 +1,23 @@
 package by.epam.javawebtraining.kunitski.task01.util.creator;
 
+import by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Tv;
 import by.epam.javawebtraining.kunitski.task01.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.util.Reader;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Read the data from file (PATH_FILE), next split necessary line and put it in listArgs,
- * next parse each value (value is validated in class Parser!) and create required equipment.
+ * Read the data from file (PATH_FILE), then split necessary line and put it in listArgs,
+ * then parse each value (value is validated in class Parser!) and create required equipment.
  */
 public class CreatorTv implements AbstractCreator {
 
   @Override
-  public Tv create() throws FileNotFoundException {
+  public Tv create() throws WrongDataPathTechnicalException {
 
-    List<String> listString = Reader.readFromFile(AbstractCreator.PATH_FILE);
+    List<String> listString = Reader.readFromFile(AbstractCreator.DATA_PATH);
     List<String> listArgs = new ArrayList<>();
 
     for (String line : listString) {

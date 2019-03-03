@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.model.exception.CorrectDataMyException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongSizeDisplayLogicException;
 
 /**
  * The base class for all viewing equipments.
@@ -25,9 +25,9 @@ public class ViewingEquipment extends Equipment {
     return sizeDisplay;
   }
 
-  public void setSizeDisplay(int sizeDisplay) throws CorrectDataMyException {
+  public void setSizeDisplay(int sizeDisplay) throws WrongSizeDisplayLogicException {
     if (sizeDisplay <= 0) {
-      throw new CorrectDataMyException("Incorrect value of sizeDisplay");
+      throw new WrongSizeDisplayLogicException("Incorrect value of sizeDisplay");
     }
 
     this.sizeDisplay = sizeDisplay;

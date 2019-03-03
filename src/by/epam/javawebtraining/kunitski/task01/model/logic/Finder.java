@@ -1,8 +1,8 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
+import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
 import by.epam.javawebtraining.kunitski.task01.model.container.Home;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
-import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyException;
 
 /**
  * This class find the required equipments according to their parameters.
@@ -10,9 +10,9 @@ import by.epam.javawebtraining.kunitski.task01.model.exception.NullReferenceMyEx
  * Methods: findNeedPrice and findNeedPower I made public because they may be used in controller.
  */
 public class Finder {
-  public static Equipment findMaxPrice(Home home) throws NullReferenceMyException {
+  public static Equipment findMaxPrice(Home home) throws NullHomeLogicException {
     if (home == null) {
-      throw new NullReferenceMyException();
+      throw new NullHomeLogicException();
     }
     double max = 0;
 
@@ -24,9 +24,9 @@ public class Finder {
     return findNeedPrice(home, max);
   }
 
-  public static Equipment findMinPrice(Home home) throws NullReferenceMyException {
+  public static Equipment findMinPrice(Home home) throws NullHomeLogicException {
     if (home == null) {
-      throw new NullReferenceMyException();
+      throw new NullHomeLogicException();
     }
     Equipment[] temp = ParserHome.getArray(home);
     double min = temp[0].getPrice();
@@ -39,9 +39,9 @@ public class Finder {
     return findNeedPrice(home, min);
   }
 
-  public static Equipment findMaxPower(Home home) throws NullReferenceMyException {
+  public static Equipment findMaxPower(Home home) throws NullHomeLogicException {
     if (home == null) {
-      throw new NullReferenceMyException();
+      throw new NullHomeLogicException();
     }
     int max = 0;
 
@@ -53,9 +53,9 @@ public class Finder {
     return findNeedPower(home, max);
   }
 
-  public static Equipment findMinPower(Home home) throws NullReferenceMyException {
+  public static Equipment findMinPower(Home home) throws NullHomeLogicException {
     if (home == null) {
-      throw new NullReferenceMyException();
+      throw new NullHomeLogicException();
     }
     Equipment[] temp = ParserHome.getArray(home);
     int min = temp[0].getPower();
