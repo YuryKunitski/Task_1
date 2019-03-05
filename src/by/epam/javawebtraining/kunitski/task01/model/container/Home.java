@@ -3,10 +3,12 @@ package by.epam.javawebtraining.kunitski.task01.model.container;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
+import java.util.Collection;
+
 /**
  * This a universal container for collection and array.
  */
-public interface Home<T> {
+public interface Home<T> extends Iterable, Collection {
 
    T getEquipment();
 
