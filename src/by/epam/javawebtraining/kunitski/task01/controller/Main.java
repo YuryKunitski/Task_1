@@ -7,7 +7,9 @@ import by.epam.javawebtraining.kunitski.task01.model.logic.Calculator;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Finder;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
 import by.epam.javawebtraining.kunitski.task01.util.creator.*;
-import by.epam.javawebtraining.kunitski.task01.view.Printer;
+import by.epam.javawebtraining.kunitski.task01.view.Printable;
+import by.epam.javawebtraining.kunitski.task01.view.PrinterConsole;
+import by.epam.javawebtraining.kunitski.task01.view.PrinterFile;
 
 public class Main {
   public static void main(String[] args) {
@@ -30,13 +32,19 @@ public class Main {
       homeList.removeEquipment(0);
       homeList.removeEquipment(e2.create());
 
-      Printer.print(homeList+"\n");
-      Printer.print("Equipment with max power - " + Finder.findMaxPower(homeList)+"\n");
-      Printer.print("General power - " + Calculator.calcSumPower(homeList)+"\n");
+
+      Printable printerFile = new PrinterFile();
+      Printable printerConsole = new PrinterConsole();
+
+      printerFile.print(homeList);
+      printerConsole.print(homeList);
+      printerConsole.print(homeList+"\n");
+      printerConsole.print("Equipment with max power - " + Finder.findMaxPower(homeList)+"\n");
+      printerConsole.print("General power - " + Calculator.calcSumPower(homeList)+"\n");
       Sort.sortPricePowerEquipment(homeList);
-      Printer.print("Sorted by price and power - " + homeList+"\n");
+      printerConsole.print("Sorted by price and power - " + homeList+"\n");
       Sort.sortPowerEquipment(homeList);
-      Printer.print("Sorted by only power - " + homeList+"\n");
+      printerConsole.print("Sorted by only power - " + homeList+"\n");
     }
     catch (Exception e) {
       System.out.println(e);
