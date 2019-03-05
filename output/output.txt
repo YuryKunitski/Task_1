@@ -1,0 +1,4 @@
+EquipmentArray:
+Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+MultiCooker:firmName=Tefal, price=250.0, power=1000, working=true, volume=8.0, numbPrograms=22
+Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
