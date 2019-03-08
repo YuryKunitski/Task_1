@@ -4,11 +4,14 @@ import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
 import java.util.Collection;
+import java.util.Deque;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * This a universal container for collection and array.
  */
-public interface Home<T> extends Iterable, Collection {
+public interface Home<T> extends Iterable, Collection,Queue, Deque, List {
 
    T getEquipment();
 
