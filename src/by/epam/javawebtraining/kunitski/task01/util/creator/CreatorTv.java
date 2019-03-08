@@ -15,9 +15,9 @@ import java.util.List;
 public class CreatorTv implements AbstractCreator {
 
   @Override
-  public Tv create() throws WrongDataPathTechnicalException {
+  public Tv create(String dataPath) throws WrongDataPathTechnicalException {
 
-    List<String> listString = Reader.readFromFile(AbstractCreator.DATA_PATH);
+    List<String> listString = Reader.readFromFile(dataPath);
     List<String> listArgs = new ArrayList<>();
 
     for (String line : listString) {
@@ -25,19 +25,12 @@ public class CreatorTv implements AbstractCreator {
         listArgs = Parser.splitLine(line);
       }
     }
-    String arg1 = null;
-    double arg2 = 0;
-    int arg3 = 0;
-    boolean arg4 = false;
-    int arg5 = 0;
-    Tv.TypeTV arg6 = null;
-
-    arg1 = listArgs.get(1);
-    arg2 = Parser.parserDouble(listArgs.get(2));
-    arg3 = Parser.parserInt(listArgs.get(3));
-    arg4 = Parser.parserBoolen(listArgs.get(4));
-    arg5 = Parser.parserInt(listArgs.get(5));
-    arg6 = Parser.parserTypeTv(listArgs.get(6));
+    String arg1 = listArgs.get(1);;
+    double arg2 = Parser.parserDouble(listArgs.get(2));
+    int arg3 = Parser.parserInt(listArgs.get(3));
+    boolean arg4 = Parser.parserBoolen(listArgs.get(4));
+    int arg5 = Parser.parserInt(listArgs.get(5));
+    Tv.TVType arg6 = Parser.parserTvType(listArgs.get(6));
 
     return new Tv(arg1, arg2, arg3, arg4, arg5, arg6);
   }

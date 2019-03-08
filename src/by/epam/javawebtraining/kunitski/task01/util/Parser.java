@@ -42,10 +42,10 @@ public class Parser {
     return result;
   }
 
-  public static Tv.TypeTV parserTypeTv(String value) {
-    Tv.TypeTV result = null;
-    if (Validator.isValidTypeTv(value)) {
-      result = Tv.TypeTV.valueOf(value.toUpperCase());
+  public static Tv.TVType parserTvType(String value) {
+    Tv.TVType result = null;
+    if (Validator.isValidTvType(value)) {
+      result = Tv.TVType.valueOf(value.toUpperCase());
     }
     return result;
   }

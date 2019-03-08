@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.exception;
 
-public class TechnicalException extends MainProjectException {
+public class TechnicalException extends MainEquipmentException {
 
   public TechnicalException() {
   }

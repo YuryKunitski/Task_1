@@ -1,7 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.*;
-import by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TypeTV;
+import by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,13 +12,14 @@ public class TvTest {
 
   @Before
   public void initialization() {
-    tvActual = new Tv("Horizont", 1, 1, false, 1, TypeTV.BELTELECOM);
+    tvActual = new Tv("Horizont", 1, 1, false,
+            1, TVType.BELTELECOM);
   }
 
 
   @Test
   public void setFirmName() throws WrongFirmNameLogicException {
-    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TypeTV.ZALA);
+    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TVType.ZALA);
     tvActual.setFirmName("Atlant");
     assertEquals(tvExpected.getFirmName(), tvActual.getFirmName());
   }
@@ -30,7 +31,7 @@ public class TvTest {
 
   @Test
   public void setPrice() throws WrongPriceLogicException {
-    Tv tvExpected = new Tv("Atlant", 100, 100, true, 52, TypeTV.ZALA);
+    Tv tvExpected = new Tv("Atlant", 100, 100, true, 52, TVType.ZALA);
     tvActual.setPrice(100);
     assertEquals(tvExpected.getPrice(), tvActual.getPrice(), 0.0000001);
   }
@@ -47,7 +48,7 @@ public class TvTest {
 
   @Test
   public void setPower() throws WrongPowerLogicException {
-    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TypeTV.ZALA);
+    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TVType.ZALA);
     tvActual.setPower(100);
     assertEquals(tvExpected.getPower(), tvActual.getPower());
   }
@@ -64,14 +65,14 @@ public class TvTest {
 
   @Test
   public void setWorking() {
-    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TypeTV.ZALA);
+    Tv tvExpected = new Tv("Atlant", 1, 100, true, 52, TVType.ZALA);
     tvActual.setWorking(true);
     assertEquals(tvExpected.isWorking(), tvActual.isWorking());
   }
 
   @Test
   public void setSizeDisplay() throws WrongSizeDisplayLogicException {
-    Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TypeTV.ZALA);
+    Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TVType.ZALA);
     tvActual.setSizeDisplay(36);
     assertEquals(tvExpected.getSizeDisplay(), tvActual.getSizeDisplay());
   }
@@ -87,14 +88,14 @@ public class TvTest {
   }
 
   @Test
-  public void setTypeTV() throws WrongTypeTVLogicException {
-    Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TypeTV.ZALA);
-    tvActual.setTypeTV(TypeTV.ZALA);
+  public void setTypeTV() throws WrongTVTypeLogicException {
+    Tv tvExpected = new Tv("Atlant", 1, 100, true, 36, TVType.ZALA);
+    tvActual.setTvType(TVType.ZALA);
     assertEquals(tvExpected.getTypeTV(), tvActual.getTypeTV());
   }
 
-  @Test(expected = WrongTypeTVLogicException.class)
-  public void setTypeTVByException() throws WrongTypeTVLogicException {
-    tvActual.setTypeTV(null);
+  @Test(expected = WrongTVTypeLogicException.class)
+  public void setTypeTVByException() throws WrongTVTypeLogicException {
+    tvActual.setTvType(null);
   }
 }

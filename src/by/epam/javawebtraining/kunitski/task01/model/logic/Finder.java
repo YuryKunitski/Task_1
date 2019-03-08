@@ -1,7 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
-import by.epam.javawebtraining.kunitski.task01.model.container.Home;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
 /**
@@ -10,7 +10,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
  * Methods: findNeedPrice and findNeedPower I made public because they may be used in controller.
  */
 public class Finder {
-  public static Equipment findMaxPrice(Home home) throws NullHomeLogicException {
+  public static Equipment findMaxPrice(EquipmentCollection home) throws NullHomeLogicException {
     if (home == null) {
       throw new NullHomeLogicException();
     }
@@ -24,7 +24,7 @@ public class Finder {
     return findNeedPrice(home, max);
   }
 
-  public static Equipment findMinPrice(Home home) throws NullHomeLogicException {
+  public static Equipment findMinPrice(EquipmentCollection home) throws NullHomeLogicException {
     if (home == null) {
       throw new NullHomeLogicException();
     }
@@ -39,7 +39,7 @@ public class Finder {
     return findNeedPrice(home, min);
   }
 
-  public static Equipment findMaxPower(Home home) throws NullHomeLogicException {
+  public static Equipment findMaxPower(EquipmentCollection home) throws NullHomeLogicException {
     if (home == null) {
       throw new NullHomeLogicException();
     }
@@ -53,7 +53,7 @@ public class Finder {
     return findNeedPower(home, max);
   }
 
-  public static Equipment findMinPower(Home home) throws NullHomeLogicException {
+  public static Equipment findMinPower(EquipmentCollection home) throws NullHomeLogicException {
     if (home == null) {
       throw new NullHomeLogicException();
     }
@@ -68,7 +68,7 @@ public class Finder {
     return findNeedPower(home, min);
   }
 
-  public static Equipment findNeedPrice(Home home, double value) {
+  public static Equipment findNeedPrice(EquipmentCollection home, double value) {
     Equipment findEquipment = null;
 
     if (home != null && value > 0) {
@@ -81,7 +81,7 @@ public class Finder {
     return findEquipment;
   }
 
-  public static Equipment findNeedPower(Home home, int value) {
+  public static Equipment findNeedPower(EquipmentCollection home, int value) {
     Equipment findEquipment = null;
 
     if (home != null && value > 0) {
@@ -94,7 +94,7 @@ public class Finder {
     return findEquipment;
   }
 
-  public static Equipment findNeedFirmName(Home home, String value) {
+  public static Equipment findNeedFirmName(EquipmentCollection home, String value) {
     Equipment findEquipment = null;
 
     if (home != null && value != null) {

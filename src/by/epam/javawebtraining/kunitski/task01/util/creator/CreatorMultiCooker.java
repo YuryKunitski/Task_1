@@ -16,9 +16,9 @@ import java.util.List;
 public class CreatorMultiCooker implements AbstractCreator {
 
   @Override
-  public MultiCooker create() throws WrongDataPathTechnicalException {
+  public MultiCooker create(String dataPath) throws WrongDataPathTechnicalException {
 
-    List<String> listString = Reader.readFromFile(AbstractCreator.DATA_PATH);
+    List<String> listString = Reader.readFromFile(dataPath);
     List<String> listArgs = new ArrayList<>();
 
     for (String line : listString) {

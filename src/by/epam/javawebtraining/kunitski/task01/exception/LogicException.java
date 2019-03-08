@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.exception;
 
-public class LogicException extends MainProjectException {
+public class LogicException extends MainEquipmentException {
 
   public LogicException() {
   }

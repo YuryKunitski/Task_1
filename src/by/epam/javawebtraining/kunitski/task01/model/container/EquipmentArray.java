@@ -8,21 +8,28 @@ import java.util.Arrays;
 /**
  * Container of dynamic array
  */
-public class HomeArray implements Home<Equipment[]> {
+public class EquipmentArray implements EquipmentCollection<Equipment[]> {
 
-  public static final int LENGTH_DEFOULT = 0;
+  public static final int LENGTH_DEFAULT = 0;
   private int length;
   private int currentIndex = 0;
   private Equipment[] equipmentArray;
 
-  public HomeArray() {
-    length = LENGTH_DEFOULT;
+  public EquipmentArray() {
+    length = LENGTH_DEFAULT;
     equipmentArray = new Equipment[length];
   }
 
-  public HomeArray(int length) {
+  public EquipmentArray(int length) {
     this.length = length;
     equipmentArray = new Equipment[this.length];
+  }
+
+
+  public EquipmentArray(EquipmentArray other) {
+    length = other.length;
+    currentIndex = other.currentIndex;
+    equipmentArray = Arrays.copyOf(other.equipmentArray, other.length);
   }
 
   public int getLength() {
@@ -93,7 +100,7 @@ public class HomeArray implements Home<Equipment[]> {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    HomeArray homeArray = (HomeArray) o;
+    EquipmentArray homeArray = (EquipmentArray) o;
 
     if (length != homeArray.length) return false;
     if (currentIndex != homeArray.currentIndex) return false;

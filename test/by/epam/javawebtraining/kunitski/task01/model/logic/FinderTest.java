@@ -1,21 +1,21 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
-import by.epam.javawebtraining.kunitski.task01.model.container.Home;
-import by.epam.javawebtraining.kunitski.task01.model.container.HomeList;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TypeTV.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class FinderTest {
-  private Home home;
+  private EquipmentCollection home;
 
   @Before
   public void initialization() {
-    home = new HomeList();
+    home = new EquipmentList();
     Equipment e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 300, 2000, false, 2, true);
     Equipment e3 = new MultiCooker("LG", 400, 1500, true, 2, 24);

@@ -15,9 +15,9 @@ import java.util.List;
 public class CreatorComputer implements AbstractCreator {
 
   @Override
-  public Computer create() throws WrongDataPathTechnicalException {
+  public Computer create(String dataPath) throws WrongDataPathTechnicalException {
 
-    List<String> listString = Reader.readFromFile(AbstractCreator.DATA_PATH);
+    List<String> listString = Reader.readFromFile(dataPath);
     List<String> listArgs = new ArrayList<>();
 
     for (String line : listString) {

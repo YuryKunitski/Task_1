@@ -1,35 +1,35 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
-import by.epam.javawebtraining.kunitski.task01.exception.WrongTypeTVLogicException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongTVTypeLogicException;
 
 public class Tv extends ViewingEquipment {
-  private TypeTV typeTV;
+  private TVType tvType;
 
-  public enum TypeTV {
+  public enum TVType {
     COSMOSTV, ZALA, VOKATV, BELTELECOM
   }
 
   public Tv() {
   }
 
-  public Tv(String firmName, double price, int power, boolean working, int sizeDisplay, TypeTV typeTV) {
+  public Tv(String firmName, double price, int power, boolean working, int sizeDisplay, TVType tvType) {
     super(firmName, price, power, working, sizeDisplay);
-    this.typeTV = typeTV;
+    this.tvType = tvType;
   }
 
   public Tv(Tv other) {
-    typeTV = other.typeTV;
+    tvType = other.tvType;
   }
 
-  public TypeTV getTypeTV() {
-    return typeTV;
+  public TVType getTypeTV() {
+    return tvType;
   }
 
-  public void setTypeTV(TypeTV typeTV) throws WrongTypeTVLogicException {
+  public void setTvType(TVType typeTV) throws WrongTVTypeLogicException {
     if (typeTV == null) {
-      throw new WrongTypeTVLogicException("Incorrect value of TypeTV");
+      throw new WrongTVTypeLogicException("Incorrect value of TypeTV");
     }
-    this.typeTV = typeTV;
+    this.tvType = typeTV;
   }
 
   @Override
@@ -40,19 +40,20 @@ public class Tv extends ViewingEquipment {
 
     Tv tv = (Tv) o;
 
-    return typeTV == tv.typeTV;
+    return tvType == tv.tvType;
   }
 
   @Override
   public int hashCode() {
     int result = super.hashCode();
-    result = 31 * result + (typeTV != null ? typeTV.hashCode() : 0);
+    result = 31 * result + (tvType != null ? tvType.hashCode() : 0);
     return result;
   }
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":" + super.toString() + ", TypeTV=" + typeTV;
+    return getClass().getSimpleName() + ":" + super.toString()
+            + ", TypeTV=" + tvType;
   }
 }
 

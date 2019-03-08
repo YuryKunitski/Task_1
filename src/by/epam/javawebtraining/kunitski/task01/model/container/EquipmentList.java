@@ -6,16 +6,20 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeList implements Home<List<Equipment>> {
+public class EquipmentList implements EquipmentCollection<List<Equipment>> {
 
   private List<Equipment> equipmentList;
 
-  public HomeList() {
+  public EquipmentList() {
     equipmentList = new ArrayList<>();
   }
 
-  public HomeList(List<Equipment> equipmentList) {
+  public EquipmentList(List<Equipment> equipmentList) {
     this.equipmentList = equipmentList;
+  }
+
+  public EquipmentList(EquipmentList other) {
+    equipmentList = other.equipmentList;
   }
 
   @Override
@@ -65,7 +69,7 @@ public class HomeList implements Home<List<Equipment>> {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    HomeList homeList = (HomeList) o;
+    EquipmentList homeList = (EquipmentList) o;
 
     return equipmentList != null ? equipmentList.equals(homeList.equipmentList) : homeList.equipmentList == null;
   }

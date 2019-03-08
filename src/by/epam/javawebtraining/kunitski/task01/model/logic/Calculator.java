@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.Home;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.entity.KitchenEquipment;
 import by.epam.javawebtraining.kunitski.task01.model.entity.ViewingEquipment;
@@ -10,7 +10,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.ViewingEquipment;
  */
 public class Calculator {
 
-  public static int calcSumPower(Home home) {
+  public static int calcSumPower(EquipmentCollection home) {
     int counter = 0;
     if (home != null) {
       for (Equipment e : ParserHome.getArray(home)) {
@@ -20,7 +20,7 @@ public class Calculator {
     return counter;
   }
 
-  public static int calcWorkingPower(Home home) {
+  public static int calcWorkingPower(EquipmentCollection home) {
     int counter = 0;
     if (home != null) {
       for (Equipment e : ParserHome.getArray(home)) {
@@ -32,7 +32,7 @@ public class Calculator {
     return counter;
   }
 
-  public static int calcKitchenPower(Home home) {
+  public static int calcKitchenPower(EquipmentCollection home) {
     int counter = 0;
     if (home != null) {
       for (Equipment e : ParserHome.getArray(home)) {
@@ -44,7 +44,7 @@ public class Calculator {
     return counter;
   }
 
-  public static int calcWiewingPower(Home home) {
+  public static int calcWiewingPower(EquipmentCollection home) {
     int counter = 0;
     if (home != null) {
       for (Equipment e : ParserHome.getArray(home)) {
@@ -56,7 +56,7 @@ public class Calculator {
     return counter;
   }
 
-  public static int calcAllPrice(Home home) {
+  public static int calcAllPrice(EquipmentCollection home) {
     int counter = 0;
     if (home != null) {
       for (Equipment e : ParserHome.getArray(home)) {

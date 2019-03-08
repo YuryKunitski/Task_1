@@ -6,7 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 /**
  * This a universal container for collection and array.
  */
-public interface Home<T> {
+public interface EquipmentCollection<T> {
 
    T getEquipment();
 

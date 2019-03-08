@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.model.logic;
+package by.epam.javawebtraining.kunitski.task01.model.logic.comparator;
 
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 

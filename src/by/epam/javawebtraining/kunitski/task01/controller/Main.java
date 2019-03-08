@@ -1,20 +1,23 @@
 package by.epam.javawebtraining.kunitski.task01.controller;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.Home;
-import by.epam.javawebtraining.kunitski.task01.model.container.HomeArray;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Calculator;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Finder;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
 import by.epam.javawebtraining.kunitski.task01.util.creator.*;
+import by.epam.javawebtraining.kunitski.task01.view.ConsolePrinter;
+import by.epam.javawebtraining.kunitski.task01.view.FilePrinter;
 import by.epam.javawebtraining.kunitski.task01.view.Printable;
-import by.epam.javawebtraining.kunitski.task01.view.PrinterConsole;
-import by.epam.javawebtraining.kunitski.task01.view.PrinterFile;
 
 public class Main {
+  private static String outputPath = "output//output.txt";
+  private static String inputPath = "input//data.txt";
+
   public static void main(String[] args) {
     try {
-      Home<Equipment[]> homeList = new HomeArray();
+      EquipmentCollection<Equipment[]> homeList = new EquipmentArray();
 //      Home<List<Equipment>> homeList = new HomeList();
 
       AbstractCreator e1 = new CreatorKettle();
@@ -23,18 +26,18 @@ public class Main {
       AbstractCreator e4 = new CreatorMultiCooker();
       AbstractCreator e5 = new CreatorTv();
 
-      homeList.addEquipment(e1.create());
-      homeList.addEquipment(e2.create());
-      homeList.addEquipment(e3.create());
-      homeList.addEquipment(e4.create());
-      homeList.addEquipment(e5.create());
+      homeList.addEquipment(e1.create(inputPath));
+      homeList.addEquipment(e2.create(inputPath));
+      homeList.addEquipment(e3.create(inputPath));
+      homeList.addEquipment(e4.create(inputPath));
+      homeList.addEquipment(e5.create(inputPath));
 
-      homeList.removeEquipment(0);
-      homeList.removeEquipment(e2.create());
+//      homeList.removeEquipment(0);
+//      homeList.removeEquipment(e2.create());
 
 
-      Printable printerFile = new PrinterFile();
-      Printable printerConsole = new PrinterConsole();
+      Printable printerFile = new FilePrinter(outputPath);
+      Printable printerConsole = new ConsolePrinter();
 
       printerFile.print(homeList);
       printerConsole.print(homeList);
