@@ -1,52 +1,156 @@
 package by.epam.javawebtraining.kunitski.task01.util;
 
-import by.epam.javawebtraining.kunitski.task01.model.entity.Tv;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import by.epam.javawebtraining.kunitski.task01.exception.LogicException;
+import by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
+import by.epam.javawebtraining.kunitski.task01.model.entity.*;
+import by.epam.javawebtraining.kunitski.task01.util.creator.*;
 
 public class Parser {
-  /**
-   * @param lineFromFile Split the "lineFromFile" by regex
-   * @return List arguments for our objects without first value because first value isn't included
-   * in our objects
-   */
-  public static List<String> splitLine(String lineFromFile) {
-    String regex = " ";
-    String[] arrayArgs = lineFromFile.split(regex);
-    return new ArrayList<>(Arrays.asList(arrayArgs));
+
+  private EquipmentCollection equipmentArray = new EquipmentArray();
+  private AbstractCreator creator;
+
+  public EquipmentCollection totalEquipmentList(String dataPath)
+          throws WrongDataPathTechnicalException {
+
+    try {
+      String[] dataLines = Reader.readFromFile(dataPath).split("\n");
+      kettleParser(dataLines);
+      microwaveParser(dataLines);
+      multiCookerParser(dataLines);
+      computerParser(dataLines);
+      tvParser(dataLines);
+    } catch (LogicException e) {
+      System.out.println(e);
+    }
+
+    return equipmentArray;
   }
 
-  public static int parserInt(String value) {
-    int result = 0;
-    if (Validator.isValidNumber(value)) {
-      result = Integer.parseInt(value);
+  private void kettleParser(String[] dataLines) throws LogicException {
+    String[] argumentArray = null;
+    Kettle kettle = null;
+
+    for (String s : dataLines) {
+      if (s.contains("Kettle")
+              && Validator.isValidKettle(argumentArray = s.split(" "))) {
+
+        creator = new KettleCreator();
+
+        kettle = ((KettleCreator) creator).create();
+
+        kettle.setFirmName(argumentArray[1]);
+        kettle.setPrice(Double.parseDouble(argumentArray[2]));
+        kettle.setPower(Integer.parseInt(argumentArray[3]));
+        kettle.setWorking(Boolean.parseBoolean(argumentArray[4]));
+        kettle.setVolume(Double.parseDouble(argumentArray[5]));
+        kettle.setMinWaterLevel(Double.parseDouble(argumentArray[6]));
+
+        equipmentArray.addEquipment(kettle);
+      }
     }
-    return result;
   }
 
-  public static double parserDouble(String value) {
-    double result = 0;
-    if (Validator.isValidNumber(value)) {
-      result = Double.parseDouble(value);
+  private void microwaveParser(String[] dataLines) throws LogicException {
+    String[] argumentArray = null;
+    Microwave microwave = null;
+
+    for (String s : dataLines) {
+      if (s.contains("Microwave")
+              && Validator.isValidMicrowave(argumentArray = s.split(" "))) {
+
+        creator = new MicrowaveCreator();
+
+        microwave = ((MicrowaveCreator) creator).create();
+
+        microwave.setFirmName(argumentArray[1]);
+        microwave.setPrice(Double.parseDouble(argumentArray[2]));
+        microwave.setPower(Integer.parseInt(argumentArray[3]));
+        microwave.setWorking(Boolean.parseBoolean(argumentArray[4]));
+        microwave.setVolume(Double.parseDouble(argumentArray[5]));
+        microwave.setTouchControl(Boolean.parseBoolean(argumentArray[6]));
+
+        equipmentArray.addEquipment(microwave);
+      }
     }
-    return result;
   }
 
-  public static boolean parserBoolen(String value) {
-    boolean result = false;
-    if (Validator.isValidBoolen(value)) {
-      result = Boolean.parseBoolean(value);
+  private void multiCookerParser(String[] dataLines) throws LogicException {
+    String[] argumentArray = null;
+    MultiCooker multiCooker = null;
+
+    for (String s : dataLines) {
+      if (s.contains("MultiCooker")
+              && Validator.isValidMultiCooker(argumentArray = s.split(" "))) {
+
+        creator = new MultiCookerCreator();
+
+        multiCooker = ((MultiCookerCreator) creator).create();
+
+        multiCooker.setFirmName(argumentArray[1]);
+        multiCooker.setPrice(Double.parseDouble(argumentArray[2]));
+        multiCooker.setPower(Integer.parseInt(argumentArray[3]));
+        multiCooker.setWorking(Boolean.parseBoolean(argumentArray[4]));
+        multiCooker.setVolume(Double.parseDouble(argumentArray[5]));
+        multiCooker.setNumbPrograms(Integer.parseInt(argumentArray[6]));
+
+        equipmentArray.addEquipment(multiCooker);
+      }
     }
-    return result;
   }
 
-  public static Tv.TVType parserTvType(String value) {
-    Tv.TVType result = null;
-    if (Validator.isValidTvType(value)) {
-      result = Tv.TVType.valueOf(value.toUpperCase());
+
+  private void computerParser(String[] dataLines) throws LogicException {
+    String[] argumentArray = null;
+    Computer computer = null;
+
+    for (String s : dataLines) {
+      if (s.contains("Computer")
+              && Validator.isValidComputer(argumentArray = s.split(" "))) {
+
+        creator = new ComputerCreator();
+
+        computer = ((ComputerCreator) creator).create();
+
+        computer.setFirmName(argumentArray[1]);
+        computer.setPrice(Double.parseDouble(argumentArray[2]));
+        computer.setPower(Integer.parseInt(argumentArray[3]));
+        computer.setWorking(Boolean.parseBoolean(argumentArray[4]));
+        computer.setSizeDisplay(Integer.parseInt(argumentArray[5]));
+        computer.setRam(Integer.parseInt(argumentArray[6]));
+
+        equipmentArray.addEquipment(computer);
+      }
     }
-    return result;
+  }
+
+
+  private void tvParser(String[] dataLines) throws LogicException {
+    String[] argumentArray = null;
+    Tv tv = null;
+
+    for (String s : dataLines) {
+      if (s.contains("Tv") && Validator.isValidTv(argumentArray = s.split(" "))) {
+
+        creator = new TvCreator();
+
+        tv = ((TvCreator) creator).create();
+
+        tv.setFirmName(argumentArray[1]);
+        tv.setPrice(Double.parseDouble(argumentArray[2]));
+        tv.setPower(Integer.parseInt(argumentArray[3]));
+        tv.setWorking(Boolean.parseBoolean(argumentArray[4]));
+        tv.setSizeDisplay(Integer.parseInt(argumentArray[5]));
+        tv.setTvType(parserTvType(argumentArray[6]));
+
+        equipmentArray.addEquipment(tv);
+      }
+    }
+  }
+
+  private Tv.TVType parserTvType(String value) {
+    return Tv.TVType.valueOf(value.toUpperCase());
   }
 }

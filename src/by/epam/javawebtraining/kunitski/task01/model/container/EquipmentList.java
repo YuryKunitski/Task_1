@@ -23,6 +23,11 @@ public class EquipmentList implements EquipmentCollection<List<Equipment>> {
   }
 
   @Override
+  public int size() {
+    return equipmentList.size();
+  }
+
+  @Override
   public List<Equipment> getEquipment() {
     return equipmentList;
   }

@@ -3,6 +3,7 @@ package by.epam.javawebtraining.kunitski.task01.model.entity;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongTVTypeLogicException;
 
 public class Tv extends ViewingEquipment {
+
   private TVType tvType;
 
   public enum TVType {

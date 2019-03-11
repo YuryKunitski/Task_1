@@ -32,7 +32,8 @@ public class EquipmentArray implements EquipmentCollection<Equipment[]> {
     equipmentArray = Arrays.copyOf(other.equipmentArray, other.length);
   }
 
-  public int getLength() {
+  @Override
+  public int size() {
     return length;
   }
 

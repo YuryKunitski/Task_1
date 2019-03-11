@@ -3,6 +3,7 @@ package by.epam.javawebtraining.kunitski.task01.model.entity;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongRAMLogicException;
 
 public class Computer extends ViewingEquipment {
+
   private int ram;
 
   public Computer() {

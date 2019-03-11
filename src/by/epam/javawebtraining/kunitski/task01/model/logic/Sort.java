@@ -1,8 +1,8 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.comparator.ComparatorPower;
 import by.epam.javawebtraining.kunitski.task01.model.logic.comparator.ComparatorPrice;
 
@@ -15,35 +15,36 @@ import java.util.List;
  */
 
 public class Sort {
-  public static void sortPowerEquipment(EquipmentCollection home) {
-    if (home.getEquipment() != null) {
+
+  public static void sortPowerEquipment(Home home) {
+    if (home.getEquipmentHomeCatalog().getEquipment() != null) {
       ComparatorPower comp = new ComparatorPower();
-      if (home instanceof EquipmentList) {
-        ((List<Equipment>) home.getEquipment()).sort(comp);
+      if (home.getEquipmentHomeCatalog() instanceof EquipmentList) {
+        ((List<Equipment>) home.getEquipmentHomeCatalog().getEquipment()).sort(comp);
       } else {
-        Arrays.sort((Equipment[]) home.getEquipment(), comp);
+        Arrays.sort((Equipment[]) home.getEquipmentHomeCatalog().getEquipment(), comp);
       }
     }
   }
 
-  public static void sortPriceEquipment(EquipmentCollection home) {
-    if (home.getEquipment() != null) {
+  public static void sortPriceEquipment(Home home) {
+    if (home.getEquipmentHomeCatalog().getEquipment() != null) {
       ComparatorPrice comp = new ComparatorPrice();
-      if (home instanceof EquipmentList) {
-        ((List<Equipment>) home.getEquipment()).sort(comp);
+      if (home.getEquipmentHomeCatalog() instanceof EquipmentList) {
+        ((List<Equipment>) home.getEquipmentHomeCatalog().getEquipment()).sort(comp);
       } else {
-        Arrays.sort((Equipment[]) home.getEquipment(), comp);
+        Arrays.sort((Equipment[]) home.getEquipmentHomeCatalog().getEquipment(), comp);
       }
     }
   }
 
-  public static void sortPricePowerEquipment(EquipmentCollection home) {
-    if (home.getEquipment() != null) {
+  public static void sortPricePowerEquipment(Home home) {
+    if (home.getEquipmentHomeCatalog().getEquipment() != null) {
       Comparator<Equipment> comp = new ComparatorPrice().thenComparing(new ComparatorPower());
-      if (home instanceof EquipmentList) {
-        ((List<Equipment>) home.getEquipment()).sort(comp);
+      if (home.getEquipmentHomeCatalog() instanceof EquipmentList) {
+        ((List<Equipment>) home.getEquipmentHomeCatalog().getEquipment()).sort(comp);
       } else {
-        Arrays.sort((Equipment[]) home.getEquipment(), comp);
+        Arrays.sort((Equipment[]) home.getEquipmentHomeCatalog().getEquipment(), comp);
       }
     }
   }

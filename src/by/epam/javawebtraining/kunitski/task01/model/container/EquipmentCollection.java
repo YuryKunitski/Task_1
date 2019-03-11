@@ -19,4 +19,6 @@ public interface EquipmentCollection<T> {
   void removeEquipment(Equipment oldEquipment);
 
   void removeEquipment(int index);
+
+  int size();
 }

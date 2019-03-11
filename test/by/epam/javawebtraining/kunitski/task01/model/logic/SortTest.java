@@ -1,20 +1,18 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
+import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.*;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class SortTest {
 
-  private EquipmentCollection<List<Equipment>> equipmentListActual;
-  private EquipmentCollection<List<Equipment>> equipmentListExpected;
+  private Home homeListActual;
+  private Home homeListExpected;
 
   Equipment e1;
   Equipment e2;
@@ -25,8 +23,8 @@ public class SortTest {
   @Before
   public void initialization() {
 
-    equipmentListActual = new EquipmentList();
-    equipmentListExpected = new EquipmentList();
+    homeListActual = new Home(new EquipmentList());
+    homeListExpected = new Home(new EquipmentList());
 
     e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     e2 = new Microwave("LG", 300, 2000, false, 2, true);
@@ -34,49 +32,49 @@ public class SortTest {
     e4 = new Tv("Sumsung", 100, 1800, true, 2, ZALA);
     e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
-    equipmentListActual.addEquipment(e1);
-    equipmentListActual.addEquipment(e2);
-    equipmentListActual.addEquipment(e3);
-    equipmentListActual.addEquipment(e4);
-    equipmentListActual.addEquipment(e5);
+    homeListActual.getEquipmentHomeCatalog().addEquipment(e1);
+    homeListActual.getEquipmentHomeCatalog().addEquipment(e2);
+    homeListActual.getEquipmentHomeCatalog().addEquipment(e3);
+    homeListActual.getEquipmentHomeCatalog().addEquipment(e4);
+    homeListActual.getEquipmentHomeCatalog().addEquipment(e5);
   }
 
   @Test
   public void sortPowerEquipment() {
 
-    equipmentListExpected.addEquipment(e5);
-    equipmentListExpected.addEquipment(e3);
-    equipmentListExpected.addEquipment(e4);
-    equipmentListExpected.addEquipment(e2);
-    equipmentListExpected.addEquipment(e1);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
 
-    Sort.sortPowerEquipment(equipmentListActual);
-    assertEquals(equipmentListExpected, equipmentListActual);
+    Sort.sortPowerEquipment(homeListActual);
+    assertEquals(homeListExpected, homeListActual);
   }
 
   @Test
   public void sortPriceEquipment() {
 
-    equipmentListExpected.addEquipment(e1);
-    equipmentListExpected.addEquipment(e4);
-    equipmentListExpected.addEquipment(e2);
-    equipmentListExpected.addEquipment(e3);
-    equipmentListExpected.addEquipment(e5);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
 
-    Sort.sortPriceEquipment(equipmentListActual);
-    assertEquals(equipmentListExpected, equipmentListActual);
+    Sort.sortPriceEquipment(homeListActual);
+    assertEquals(homeListExpected, homeListActual);
   }
 
   @Test
   public void sortPricePowerEquipment() {
 
-    equipmentListExpected.addEquipment(e4);
-    equipmentListExpected.addEquipment(e1);
-    equipmentListExpected.addEquipment(e2);
-    equipmentListExpected.addEquipment(e3);
-    equipmentListExpected.addEquipment(e5);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
+    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
 
-    Sort.sortPricePowerEquipment(equipmentListActual);
-    assertEquals(equipmentListExpected, equipmentListActual);
+    Sort.sortPricePowerEquipment(homeListActual);
+    assertEquals(homeListExpected, homeListActual);
   }
 }
