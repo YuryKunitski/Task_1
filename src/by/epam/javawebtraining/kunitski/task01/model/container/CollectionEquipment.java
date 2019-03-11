@@ -18,9 +18,4 @@ public interface CollectionEquipment extends Iterable  {
 
   void clear();
 
-  int hashCode();
-
-  boolean equals(Object o);
-
-
 }
