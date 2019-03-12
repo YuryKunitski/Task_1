@@ -2,7 +2,7 @@ package by.epam.javawebtraining.kunitski.task01.controller;
 
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Calculator;
-import by.epam.javawebtraining.kunitski.task01.model.logic.Finder;
+import by.epam.javawebtraining.kunitski.task01.model.logic.EquipmentFinder;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
 import by.epam.javawebtraining.kunitski.task01.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.view.ConsolePrinter;
@@ -27,7 +27,7 @@ public class Main {
 
       printerConsole.print(home);
 
-      printerConsole.print("Equipment with max power - " + Finder.findMaxPower(home)+"\n");
+      printerConsole.print("Equipment with max power - " + EquipmentFinder.findMaxPower(home)+"\n");
 
       printerConsole.print("General power - " + Calculator.calcSumPower(home)+"\n");
 

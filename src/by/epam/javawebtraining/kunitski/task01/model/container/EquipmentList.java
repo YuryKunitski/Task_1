@@ -35,7 +35,7 @@ public class EquipmentList implements EquipmentCollection<List<Equipment>> {
   @Override
   public Equipment getEquipment(int index) throws WrongIndexHomeException {
 
-    if (index > 0 && index <= equipmentList.size()) {
+    if (index >= 0 && index < equipmentList.size()) {
       return equipmentList.get(index);
      }else {
       throw new WrongIndexHomeException("Incorrect index");

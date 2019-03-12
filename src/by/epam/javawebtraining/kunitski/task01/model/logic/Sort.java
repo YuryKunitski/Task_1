@@ -40,7 +40,7 @@ public class Sort {
 
   public static void sortPricePowerEquipment(Home home) {
     if (home.getEquipmentHomeCatalog().getEquipment() != null) {
-      Comparator<Equipment> comp = new ComparatorPrice().thenComparing(new ComparatorPower());
+      Comparator comp = new ComparatorPrice().thenComparing(new ComparatorPower());
       if (home.getEquipmentHomeCatalog() instanceof EquipmentList) {
         ((List<Equipment>) home.getEquipmentHomeCatalog().getEquipment()).sort(comp);
       } else {
