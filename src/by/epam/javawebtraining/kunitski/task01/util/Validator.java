@@ -6,6 +6,8 @@ package by.epam.javawebtraining.kunitski.task01.util;
 
 public class Validator {
 
+  private static final int CORRECT_ARRAY_LENGTH = 7;
+
   public static boolean isValidKettle(String[] argumentArray) {
     return isValidEquipment(argumentArray) && isValidDouble(argumentArray[5])
             && isValidDouble(argumentArray[6]);
@@ -39,7 +41,8 @@ public class Validator {
    */
 
   private static boolean isValidEquipment(String[] argumentArray) {
-    return argumentArray != null && isValidDouble(argumentArray[2]) && isValidInteger(argumentArray[3])
+    return argumentArray != null && argumentArray.length == CORRECT_ARRAY_LENGTH
+            && isValidDouble(argumentArray[2]) && isValidInteger(argumentArray[3])
             && isValidBoolean(argumentArray[4]);
   }
 

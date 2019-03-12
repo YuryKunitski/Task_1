@@ -26,10 +26,11 @@ public class KitchenEquipment extends Equipment {
   }
 
   public void setVolume(double volume) throws WrongVolumeLogicException {
-    if (volume <= 0) {
+    if (volume > 0) {
+      this.volume = volume;
+    } else {
       throw new WrongVolumeLogicException("Incorrect value of volume");
     }
-    this.volume = volume;
   }
 
   @Override

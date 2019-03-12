@@ -23,10 +23,11 @@ public class Kettle extends KitchenEquipment {
   }
 
   public void setMinWaterLevel(double minWaterLevel) throws WrongMinWaterLavelLogicException {
-    if (minWaterLevel <= 0) {
+    if (minWaterLevel > 0) {
+      this.minWaterLevel = minWaterLevel;
+    } else {
       throw new WrongMinWaterLavelLogicException("Incorrect value of minWaterLevel");
     }
-    this.minWaterLevel = minWaterLevel;
   }
 
   @Override
@@ -51,6 +52,6 @@ public class Kettle extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() +":"+ super.toString() + ", minWaterLevel=" + minWaterLevel;
+    return getClass().getSimpleName() + ":" + super.toString() + ", minWaterLevel=" + minWaterLevel;
   }
 }

@@ -49,24 +49,27 @@ public class Equipment {
   }
 
   public void setFirmName(String firmName) throws WrongFirmNameLogicException {
-    if (firmName == null) {
+    if (firmName != null) {
+      this.firmName = firmName;
+    } else {
       throw new WrongFirmNameLogicException("Firm's name - null");
     }
-    this.firmName = firmName;
   }
 
   public void setPrice(double price) throws WrongPriceLogicException {
-    if (price <= 0) {
+    if (price > 0) {
+      this.price = price;
+    } else {
       throw new WrongPriceLogicException("Incorrect value of price");
     }
-    this.price = price;
   }
 
   public void setPower(int power) throws WrongPowerLogicException {
-    if (power <= 0) {
+    if (power > 0) {
+      this.power = power;
+    } else {
       throw new WrongPowerLogicException("Incorrect value of power");
     }
-    this.power = power;
   }
 
   public void setWorking(boolean working) {

@@ -27,10 +27,11 @@ public class Tv extends ViewingEquipment {
   }
 
   public void setTvType(TVType typeTV) throws WrongTVTypeLogicException {
-    if (typeTV == null) {
+    if (typeTV != null) {
+      this.tvType = typeTV;
+    } else {
       throw new WrongTVTypeLogicException("Incorrect value of TypeTV");
     }
-    this.tvType = typeTV;
   }
 
   @Override
