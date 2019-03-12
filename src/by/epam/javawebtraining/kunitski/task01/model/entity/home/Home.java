@@ -26,6 +26,7 @@ public class Home {
     return equipmentHomeCatalog;
   }
 
+
   @Override
   public String toString() {
     StringBuilder result = new StringBuilder("EquipmentHomeCatalog:\n");

@@ -44,10 +44,11 @@ public class EquipmentArray implements EquipmentCollection<Equipment[]> {
 
   @Override
   public Equipment getEquipment(int index) throws WrongIndexHomeException {
-    if (index < 0 || index >= length) {
+    if (index > 0 && index <= length) {
+      return equipmentArray[index];
+    } else {
       throw new WrongIndexHomeException("Incorrect index");
     }
-    return equipmentArray[index];
   }
 
   @Override
