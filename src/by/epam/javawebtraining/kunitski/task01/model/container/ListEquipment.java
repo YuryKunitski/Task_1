@@ -9,6 +9,4 @@ public interface ListEquipment extends CollectionEquipment {
   Equipment setEquipment(int index, Equipment e);
 
   boolean addEquipment(int index, Equipment e);
-
-  int indexOf(Equipment e);
 }

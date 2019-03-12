@@ -10,6 +10,8 @@ import java.util.Arrays;
  */
 public class EquipmentArray implements EquipmentCollection<Equipment[]> {
 
+
+
   public static final int LENGTH_DEFAULT = 0;
   private int length;
   private int currentIndex = 0;
