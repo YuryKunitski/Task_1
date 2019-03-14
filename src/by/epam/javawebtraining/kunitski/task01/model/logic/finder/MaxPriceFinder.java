@@ -19,6 +19,6 @@ public class MaxPriceFinder extends PriseFinder {
         max = e.getPrice();
       }
     }
-    return findNeedPrice(home, max);
+    return super.findNeedValue(home, max);
   }
 }

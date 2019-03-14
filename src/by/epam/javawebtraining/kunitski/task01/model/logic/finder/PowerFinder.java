@@ -6,13 +6,14 @@ import by.epam.javawebtraining.kunitski.task01.model.logic.ParserHome;
 
 public abstract class PowerFinder implements Finder {
 
-  public static Equipment findNeedPower(Home home, int value) {
+  @Override
+  public Equipment findNeedValue(Home home, Object value) {
 
     Equipment findEquipment = null;
 
-    if (home != null && value > 0) {
+    if (home != null && (Integer)value > 0) {
       for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
-        if (e.getPower() == value) {
+        if (e.getPower() == (Integer) value) {
           findEquipment = e;
         }
       }

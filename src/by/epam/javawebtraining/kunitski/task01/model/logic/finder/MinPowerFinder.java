@@ -22,6 +22,6 @@ public class MinPowerFinder extends PowerFinder {
         min = e.getPower();
       }
     }
-    return findNeedPower(home, min);
+    return super.findNeedValue(home, min);
   }
 }

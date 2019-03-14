@@ -4,17 +4,16 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.ParserHome;
 
-public abstract class PriseFinder implements Finder {
+public class FirmNameFinder extends AbstractFirmNameFinder {
 
   @Override
   public Equipment findNeedValue(Home home, Object value) {
 
     Equipment findEquipment = null;
 
-    if (home != null && (Double)value > 0) {
-
+    if (home != null && value != null) {
       for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
-        if (e.getPrice() == (Double) value) {
+        if (e.getFirmName().equals(value)) {
           findEquipment = e;
         }
       }

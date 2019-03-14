@@ -6,6 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.ParserHome;
 
 public class MaxPowerFinder extends PowerFinder {
+
   @Override
   public Equipment find(Home home) throws NullHomeLogicException {
     if (home == null) {
@@ -18,6 +19,6 @@ public class MaxPowerFinder extends PowerFinder {
         max = e.getPower();
       }
     }
-    return findNeedPower(home, max);
+    return super.findNeedValue(home, max);
   }
 }

@@ -7,35 +7,46 @@ import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
 import by.epam.javawebtraining.kunitski.task01.util.Parser;
 import by.epam.javawebtraining.kunitski.task01.view.ConsolePrinter;
 import by.epam.javawebtraining.kunitski.task01.view.FilePrinter;
+import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 import by.epam.javawebtraining.kunitski.task01.view.Printable;
 
 public class Main {
-  private static String outputPath = "output//output.txt";
-  private static String inputPath = "input//data.txt";
+
+  private static String outputPath = "data//output//output.txt";
+  private static String inputPath = "data//input//data.txt";
 
   public static void main(String[] args) {
+
     Parser parser = new Parser();
 
     try {
 
       Home home = new Home(parser.totalEquipmentList(inputPath));
 
-      Printable printerFile = new FilePrinter(outputPath);
-      Printable printerConsole = new ConsolePrinter();
+      Printable filePrinter = new FilePrinter(outputPath);
+      Printable consolePrinter = new ConsolePrinter();
+      Printable logPrinter = new LogPrinter();
 
-      printerFile.print(home);
+      filePrinter.print(home);
 
-      printerConsole.print(home);
+      consolePrinter.print(home);
 
-      printerConsole.print("Equipment with max power - " + EquipmentFinder.findMaxPower(home)+"\n");
+      logPrinter.print("Equipment with max power - " + EquipmentFinder.findMaxPower(home)+"\n");
 
-      printerConsole.print("General power - " + Calculator.calcSumPower(home)+"\n");
+
+      logPrinter.print("Equipment with max price - " + EquipmentFinder.findMaxPrice(home)+"\n");
+
+      logPrinter.print("Equipment with min price - " + EquipmentFinder.findMinPrice(home)+"\n");
+
+      logPrinter.print("Equipment with firm name: LG - " + EquipmentFinder.findFirmName(home, "LG")+"\n");
+
+      logPrinter.print("General power - " + Calculator.calcSumPower(home)+"\n");
 
       Sort.sortPricePowerEquipment(home);
-      printerConsole.print("Sorted by price and power - " + home+"\n");
+      consolePrinter.print("Sorted by price and power - " + home+"\n");
 
       Sort.sortPowerEquipment(home);
-      printerConsole.print("Sorted by only power - " + home+"\n");
+      consolePrinter.print("Sorted by only power - " + home+"\n");
     }
     catch (Exception e) {
       System.out.println(e);

@@ -4,10 +4,7 @@ import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
-import by.epam.javawebtraining.kunitski.task01.model.logic.finder.MaxPowerFinder;
-import by.epam.javawebtraining.kunitski.task01.model.logic.finder.MaxPriceFinder;
-import by.epam.javawebtraining.kunitski.task01.model.logic.finder.PowerFinder;
-import by.epam.javawebtraining.kunitski.task01.model.logic.finder.PriseFinder;
+import by.epam.javawebtraining.kunitski.task01.model.logic.finder.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,12 +12,14 @@ import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZAL
 import static org.junit.Assert.assertEquals;
 
 public class EquipmentFinderTest {
+
   private Home home;
   private PriseFinder priseFinder = new MaxPriceFinder();
   private PowerFinder powerFinder = new MaxPowerFinder();
 
   @Before
   public void initialization() {
+
     home = new Home(new EquipmentList());
 
     Equipment e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
@@ -88,76 +87,77 @@ public class EquipmentFinderTest {
 
   @Test
   public void findNeedPrice() {
-    Equipment actual = priseFinder.findNeedPrice(home, 400);
-    Equipment expected = new MultiCooker("LG", 400, 1500, true, 2, 24);
+    Equipment actual = priseFinder.findNeedValue(home, 400.0);
+    Equipment expected = new MultiCooker("LG", 400.0, 1500, true, 2, 24);
     assertEquals(expected, actual);
   }
 
   @Test
   public void findNeedPriceNotFound() {
-    Equipment actual = priseFinder.findNeedPrice(home, 40_000);
+    priseFinder = new  MinPriceFinder();
+    Equipment actual = priseFinder.findNeedValue(home, 40_000.0);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedPriceByNull() {
-    Equipment actual = priseFinder.findNeedPrice(home = null, 400);
+    Equipment actual = priseFinder.findNeedValue(home = null, 400.0);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedPriceByZero() {
-    Equipment actual = priseFinder.findNeedPrice(home, 0);
+    Equipment actual = priseFinder.findNeedValue(home, 0.0);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedPower() {
-    Equipment actual = powerFinder.findNeedPower(home, 2000);
+    Equipment actual = powerFinder.findNeedValue(home, 2000);
     Equipment expected = new Microwave("LG", 300, 2000, false, 2, true);
     assertEquals(expected, actual);
   }
 
   @Test
   public void findNeedPowerNotFound() {
-    Equipment actual = powerFinder.findNeedPower(home, 20_000);
+    Equipment actual = powerFinder.findNeedValue(home, 20_000);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedPowerByNull() {
-    Equipment actual = powerFinder.findNeedPower(home = null, 2000);
+    Equipment actual = powerFinder.findNeedValue(home = null, 2000);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedPowerByZero() {
-    Equipment actual = powerFinder.findNeedPower(home, 0);
+    Equipment actual = powerFinder.findNeedValue(home, 0);
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedFirmName() {
-    Equipment actual = EquipmentFinder.findNeedFirmName(home, "Sumsung");
+    Equipment actual = EquipmentFinder.findFirmName(home, "Sumsung");
     Equipment expected = new Tv("Sumsung", 2000, 1800, true, 2, ZALA);
     assertEquals(expected, actual);
   }
 
   @Test
   public void findNeedFirmNameNotFound() {
-    Equipment actual = EquipmentFinder.findNeedFirmName(home, "Horizont");
+    Equipment actual = EquipmentFinder.findFirmName(home, "Horizont");
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedFirmNameByHomeNull() {
-    Equipment actual = EquipmentFinder.findNeedFirmName(home = null, "Sumsung");
+    Equipment actual = EquipmentFinder.findFirmName(home = null, "Sumsung");
     assertEquals(null, actual);
   }
 
   @Test
   public void findNeedFirmNameByValueNull() {
-    Equipment actual = EquipmentFinder.findNeedFirmName(home, null);
+    Equipment actual = EquipmentFinder.findFirmName(home, null);
     assertEquals(null, actual);
   }
 }

@@ -78,7 +78,7 @@ public class CalculatorTest {
   @Test
   public void calcWiewingPower() {
 
-    int actual = Calculator.calcWiewingPower(home);
+    int actual = Calculator.calcViewingPower(home);
     int expected = 2000;
     assertEquals(expected, actual);
   }
@@ -86,7 +86,7 @@ public class CalculatorTest {
   @Test
   public void calcWiewingPowerByNull() {
 
-    int actual = Calculator.calcWiewingPower(home = null);
+    int actual = Calculator.calcViewingPower(home = null);
     int expected = 0;
     assertEquals(expected, actual);
   }

@@ -20,6 +20,6 @@ public class MinPriceFinder extends PriseFinder {
         min = e.getPrice();
       }
     }
-    return findNeedPrice(home, min);
+    return super.findNeedValue(home, min);
   }
 }
