@@ -9,16 +9,19 @@ public class MaxPowerFinder extends PowerFinder {
 
   @Override
   public Equipment find(Home home) throws NullHomeLogicException {
-    if (home == null) {
+
+    int max = 0;
+    if (home != null) {
+
+      for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
+        if (e.getPower() > max) {
+          max = e.getPower();
+        }
+      }
+    } else {
       throw new NullHomeLogicException();
     }
-    int max = 0;
 
-    for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
-      if (e.getPower() > max) {
-        max = e.getPower();
-      }
-    }
     return super.findNeedValue(home, max);
   }
 }

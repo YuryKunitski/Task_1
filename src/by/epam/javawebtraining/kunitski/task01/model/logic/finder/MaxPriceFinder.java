@@ -9,16 +9,20 @@ public class MaxPriceFinder extends PriseFinder {
 
   @Override
   public Equipment find(Home home) throws NullHomeLogicException {
-    if (home == null) {
-      throw new NullHomeLogicException();
-    }
+
     double max = 0;
 
-    for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
-      if (e.getPrice() > max) {
-        max = e.getPrice();
+    if (home != null) {
+
+      for (Equipment e : ParserHome.getArray(home.getEquipmentHomeCatalog())) {
+        if (e.getPrice() > max) {
+          max = e.getPrice();
+        }
       }
+    } else {
+      throw new NullHomeLogicException();
     }
+
     return super.findNeedValue(home, max);
   }
 }

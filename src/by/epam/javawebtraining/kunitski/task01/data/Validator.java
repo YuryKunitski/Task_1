@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.util;
+package by.epam.javawebtraining.kunitski.task01.data;
 
 /**
  * Validates the input data
@@ -47,11 +47,13 @@ public class Validator {
   }
 
   private static boolean isValidInteger(String value) {
-    return value != null && value.matches("[0-9]+");
+    return value != null
+            && value.matches("[0-9]+");
   }
 
   private static boolean isValidDouble(String value) {
-    return value != null && value.matches("\\d+(\\.\\d+)?");
+    return value != null
+            && value.matches("\\d+(\\.\\d+)?");
   }
 
   private static boolean isValidBoolean(String value) {

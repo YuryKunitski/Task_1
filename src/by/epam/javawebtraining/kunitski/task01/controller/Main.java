@@ -1,10 +1,11 @@
 package by.epam.javawebtraining.kunitski.task01.controller;
 
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Calculator;
 import by.epam.javawebtraining.kunitski.task01.model.logic.EquipmentFinder;
 import by.epam.javawebtraining.kunitski.task01.model.logic.Sort;
-import by.epam.javawebtraining.kunitski.task01.util.Parser;
+import by.epam.javawebtraining.kunitski.task01.data.Parser;
 import by.epam.javawebtraining.kunitski.task01.view.ConsolePrinter;
 import by.epam.javawebtraining.kunitski.task01.view.FilePrinter;
 import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
@@ -20,8 +21,10 @@ public class Main {
     Parser parser = new Parser();
 
     try {
+      EquipmentCollection list = parser.totalEquipmentList(inputPath);
 
-      Home home = new Home(parser.totalEquipmentList(inputPath));
+      Home home = new Home(list);
+      Home home2 = new Home(list);
 
       Printable filePrinter = new FilePrinter(outputPath);
       Printable consolePrinter = new ConsolePrinter();
@@ -30,9 +33,11 @@ public class Main {
       filePrinter.print(home);
 
       consolePrinter.print(home);
+      consolePrinter.print(home2);
+
+      consolePrinter.print("Equals - "+home.equals(home2)+"\n");
 
       logPrinter.print("Equipment with max power - " + EquipmentFinder.findMaxPower(home)+"\n");
-
 
       logPrinter.print("Equipment with max price - " + EquipmentFinder.findMaxPrice(home)+"\n");
 
@@ -49,7 +54,7 @@ public class Main {
       consolePrinter.print("Sorted by only power - " + home+"\n");
     }
     catch (Exception e) {
-      System.out.println(e);
+      LogPrinter.LOGGER.error(e);
     }
   }
 }

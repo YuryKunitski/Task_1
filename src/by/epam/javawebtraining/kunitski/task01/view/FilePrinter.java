@@ -28,6 +28,7 @@ public class FilePrinter implements Printable {
       }
     } catch (WrongOutputPathTechnicalException e) {
       System.out.println(e);
+      LogPrinter.LOGGER.error(e);
     }
   }
 }

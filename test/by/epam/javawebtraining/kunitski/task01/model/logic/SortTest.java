@@ -32,21 +32,21 @@ public class SortTest {
     e4 = new Tv("Sumsung", 100, 1800, true, 2, ZALA);
     e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
-    homeListActual.getEquipmentHomeCatalog().addEquipment(e1);
-    homeListActual.getEquipmentHomeCatalog().addEquipment(e2);
-    homeListActual.getEquipmentHomeCatalog().addEquipment(e3);
-    homeListActual.getEquipmentHomeCatalog().addEquipment(e4);
-    homeListActual.getEquipmentHomeCatalog().addEquipment(e5);
+    homeListActual.addEquipment(e1);
+    homeListActual.addEquipment(e2);
+    homeListActual.addEquipment(e3);
+    homeListActual.addEquipment(e4);
+    homeListActual.addEquipment(e5);
   }
 
   @Test
   public void sortPowerEquipment() {
 
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
+    homeListExpected.addEquipment(e5);
+    homeListExpected.addEquipment(e3);
+    homeListExpected.addEquipment(e4);
+    homeListExpected.addEquipment(e2);
+    homeListExpected.addEquipment(e1);
 
     Sort.sortPowerEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);
@@ -55,11 +55,11 @@ public class SortTest {
   @Test
   public void sortPriceEquipment() {
 
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
+    homeListExpected.addEquipment(e1);
+    homeListExpected.addEquipment(e4);
+    homeListExpected.addEquipment(e2);
+    homeListExpected.addEquipment(e3);
+    homeListExpected.addEquipment(e5);
 
     Sort.sortPriceEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);
@@ -68,11 +68,11 @@ public class SortTest {
   @Test
   public void sortPricePowerEquipment() {
 
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e4);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e1);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e2);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e3);
-    homeListExpected.getEquipmentHomeCatalog().addEquipment(e5);
+    homeListExpected.addEquipment(e4);
+    homeListExpected.addEquipment(e1);
+    homeListExpected.addEquipment(e2);
+    homeListExpected.addEquipment(e3);
+    homeListExpected.addEquipment(e5);
 
     Sort.sortPricePowerEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);

@@ -28,12 +28,17 @@ public class EquipmentList implements EquipmentCollection<List<Equipment>> {
   }
 
   @Override
+  public boolean isEmpty() {
+    return size() == 0;
+  }
+
+  @Override
   public List<Equipment> getEquipment() {
     return equipmentList;
   }
 
   @Override
-  public Equipment getEquipment(int index) throws WrongIndexHomeException {
+  public Equipment get(int index) throws WrongIndexHomeException {
 
     if (index >= 0 && index < equipmentList.size()) {
       return equipmentList.get(index);
@@ -43,28 +48,28 @@ public class EquipmentList implements EquipmentCollection<List<Equipment>> {
   }
 
   @Override
-  public void setEquipment(int index, Equipment other) {
+  public void set(int index, Equipment other) {
     if (index >= 0 && index < equipmentList.size() && other != null) {
       equipmentList.set(index, other);
     }
   }
 
   @Override
-  public void addEquipment(Equipment newEquipment) {
+  public void add(Equipment newEquipment) {
     if (newEquipment != null) {
       equipmentList.add(newEquipment);
     }
   }
 
   @Override
-  public void removeEquipment(Equipment oldEquipment) {
+  public void remove(Equipment oldEquipment) {
     if (oldEquipment != null) {
       equipmentList.remove(oldEquipment);
     }
   }
 
   @Override
-  public void removeEquipment(int index) {
+  public void remove(int index) {
     if (index >= 0) {
       equipmentList.remove(index);
     }

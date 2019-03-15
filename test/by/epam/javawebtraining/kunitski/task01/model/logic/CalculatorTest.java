@@ -21,11 +21,11 @@ public class CalculatorTest {
     Equipment e4 = new Tv("LG", 100, 1000, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 100, 1000, true, 2, 2048);
 
-    home.getEquipmentHomeCatalog().addEquipment(e1);
-    home.getEquipmentHomeCatalog().addEquipment(e2);
-    home.getEquipmentHomeCatalog().addEquipment(e3);
-    home.getEquipmentHomeCatalog().addEquipment(e4);
-    home.getEquipmentHomeCatalog().addEquipment(e5);
+    home.addEquipment(e1);
+    home.addEquipment(e2);
+    home.addEquipment(e3);
+    home.addEquipment(e4);
+    home.addEquipment(e5);
 
   }
 

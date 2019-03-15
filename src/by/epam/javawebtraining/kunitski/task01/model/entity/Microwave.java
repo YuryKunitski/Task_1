@@ -6,7 +6,8 @@ public class Microwave extends KitchenEquipment {
   public Microwave() {
   }
 
-  public Microwave(String firmName, double price, int power, boolean working, double volume, boolean touchControl) {
+  public Microwave(String firmName, double price, int power, boolean working, double volume,
+                   boolean touchControl) {
     super(firmName, price, power, working, volume);
     this.touchControl = touchControl;
   }

@@ -10,15 +10,17 @@ public interface EquipmentCollection<T> {
 
    T getEquipment();
 
-  Equipment getEquipment(int index) throws WrongIndexHomeException;
+  Equipment get(int index) throws WrongIndexHomeException;
 
-  void setEquipment(int index, Equipment other);
+  void set(int index, Equipment other);
 
-  void addEquipment(Equipment newEquipment);
+  void add(Equipment newEquipment);
 
-  void removeEquipment(Equipment oldEquipment);
+  void remove(Equipment oldEquipment);
 
-  void removeEquipment(int index);
+  void remove(int index);
 
   int size();
+
+  boolean isEmpty();
 }

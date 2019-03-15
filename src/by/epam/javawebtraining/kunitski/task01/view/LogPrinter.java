@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 
 public class LogPrinter implements Printable {
 
-  private static final Logger LOGGER = Logger.getRootLogger();
+  public static final Logger LOGGER = Logger.getRootLogger();
 
   @Override
   public void print(Object massage) {

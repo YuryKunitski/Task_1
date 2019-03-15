@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.util;
+package by.epam.javawebtraining.kunitski.task01.data;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException;
 

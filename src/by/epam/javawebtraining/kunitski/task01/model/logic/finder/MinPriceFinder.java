@@ -9,9 +9,11 @@ public class MinPriceFinder extends PriseFinder {
 
   @Override
   public Equipment find(Home home) throws NullHomeLogicException {
+
     if (home == null) {
       throw new NullHomeLogicException();
     }
+
     Equipment[] temp = ParserHome.getArray(home.getEquipmentHomeCatalog());
     double min = temp[0].getPrice();
 
