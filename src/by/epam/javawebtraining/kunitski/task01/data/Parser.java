@@ -1,36 +1,39 @@
-package by.epam.javawebtraining.kunitski.task01.util;
+package by.epam.javawebtraining.kunitski.task01.data;
 
 import by.epam.javawebtraining.kunitski.task01.exception.LogicException;
-import by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException;
+import by.epam.javawebtraining.kunitski.task01.exception.TechnicalException;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.util.creator.*;
+import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 
 public class Parser {
 
+  private String[] argumentArray;
   private EquipmentCollection equipmentArray = new EquipmentArray();
   private AbstractCreator creator;
 
-  public EquipmentCollection totalEquipmentList(String dataPath)
-          throws WrongDataPathTechnicalException {
+  public EquipmentCollection totalEquipmentList(String dataPath) {
 
     try {
       String[] dataLines = Reader.readFromFile(dataPath).split("\n");
+
       kettleParser(dataLines);
       microwaveParser(dataLines);
       multiCookerParser(dataLines);
       computerParser(dataLines);
       tvParser(dataLines);
-    } catch (LogicException e) {
+    } catch (TechnicalException | LogicException e) {
       System.out.println(e);
+      LogPrinter.LOGGER.error(e);
     }
 
     return equipmentArray;
   }
 
   private void kettleParser(String[] dataLines) throws LogicException {
-    String[] argumentArray = null;
+
     Kettle kettle = null;
 
     for (String s : dataLines) {
@@ -48,13 +51,12 @@ public class Parser {
         kettle.setVolume(Double.parseDouble(argumentArray[5]));
         kettle.setMinWaterLevel(Double.parseDouble(argumentArray[6]));
 
-        equipmentArray.addEquipment(kettle);
+        equipmentArray.add(kettle);
       }
     }
   }
 
   private void microwaveParser(String[] dataLines) throws LogicException {
-    String[] argumentArray = null;
     Microwave microwave = null;
 
     for (String s : dataLines) {
@@ -72,13 +74,12 @@ public class Parser {
         microwave.setVolume(Double.parseDouble(argumentArray[5]));
         microwave.setTouchControl(Boolean.parseBoolean(argumentArray[6]));
 
-        equipmentArray.addEquipment(microwave);
+        equipmentArray.add(microwave);
       }
     }
   }
 
   private void multiCookerParser(String[] dataLines) throws LogicException {
-    String[] argumentArray = null;
     MultiCooker multiCooker = null;
 
     for (String s : dataLines) {
@@ -96,14 +97,13 @@ public class Parser {
         multiCooker.setVolume(Double.parseDouble(argumentArray[5]));
         multiCooker.setNumbPrograms(Integer.parseInt(argumentArray[6]));
 
-        equipmentArray.addEquipment(multiCooker);
+        equipmentArray.add(multiCooker);
       }
     }
   }
 
 
   private void computerParser(String[] dataLines) throws LogicException {
-    String[] argumentArray = null;
     Computer computer = null;
 
     for (String s : dataLines) {
@@ -121,18 +121,17 @@ public class Parser {
         computer.setSizeDisplay(Integer.parseInt(argumentArray[5]));
         computer.setRam(Integer.parseInt(argumentArray[6]));
 
-        equipmentArray.addEquipment(computer);
+        equipmentArray.add(computer);
       }
     }
   }
 
 
   private void tvParser(String[] dataLines) throws LogicException {
-    String[] argumentArray = null;
-    Tv tv = null;
+    TV tv = null;
 
     for (String s : dataLines) {
-      if (s.contains("Tv") && Validator.isValidTv(argumentArray = s.split(" "))) {
+      if (s.contains("TV") && Validator.isValidTv(argumentArray = s.split(" "))) {
 
         creator = new TvCreator();
 
@@ -145,12 +144,12 @@ public class Parser {
         tv.setSizeDisplay(Integer.parseInt(argumentArray[5]));
         tv.setTvType(parserTvType(argumentArray[6]));
 
-        equipmentArray.addEquipment(tv);
+        equipmentArray.add(tv);
       }
     }
   }
 
-  private Tv.TVType parserTvType(String value) {
-    return Tv.TVType.valueOf(value.toUpperCase());
+  private TV.TVType parserTvType(String value) {
+    return TV.TVType.valueOf(value.toUpperCase());
   }
 }

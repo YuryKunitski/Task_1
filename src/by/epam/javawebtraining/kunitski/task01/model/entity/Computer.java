@@ -24,10 +24,11 @@ public class Computer extends ViewingEquipment {
   }
 
   public void setRam(int ram) throws WrongRAMLogicException {
-    if (ram <= 0) {
+    if (ram > 0) {
+      this.ram = ram;
+      }else {
       throw new WrongRAMLogicException("Incorrect value of ram");
     }
-    this.ram = ram;
   }
 
   @Override

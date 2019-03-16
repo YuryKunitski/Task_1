@@ -26,11 +26,11 @@ public class ViewingEquipment extends Equipment {
   }
 
   public void setSizeDisplay(int sizeDisplay) throws WrongSizeDisplayLogicException {
-    if (sizeDisplay <= 0) {
+    if (sizeDisplay > 0) {
+      this.sizeDisplay = sizeDisplay;
+    } else {
       throw new WrongSizeDisplayLogicException("Incorrect value of sizeDisplay");
     }
-
-    this.sizeDisplay = sizeDisplay;
   }
 
   @Override

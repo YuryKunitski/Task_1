@@ -23,10 +23,11 @@ public class MultiCooker extends KitchenEquipment {
   }
 
   public void setNumbPrograms(int numbPrograms) throws WrongNumbProgramsLogicException {
-    if (numbPrograms <= 0) {
+    if (numbPrograms > 0) {
+      this.numbPrograms = numbPrograms;
+    } else {
       throw new WrongNumbProgramsLogicException("Incorrect value of numbPrograms");
     }
-    this.numbPrograms = numbPrograms;
   }
 
   @Override

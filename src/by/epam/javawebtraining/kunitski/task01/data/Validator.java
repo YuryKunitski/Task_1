@@ -1,10 +1,12 @@
-package by.epam.javawebtraining.kunitski.task01.util;
+package by.epam.javawebtraining.kunitski.task01.data;
 
 /**
  * Validates the input data
  */
 
 public class Validator {
+
+  private static final int CORRECT_ARRAY_LENGTH = 7;
 
   public static boolean isValidKettle(String[] argumentArray) {
     return isValidEquipment(argumentArray) && isValidDouble(argumentArray[5])
@@ -39,16 +41,19 @@ public class Validator {
    */
 
   private static boolean isValidEquipment(String[] argumentArray) {
-    return argumentArray != null && isValidDouble(argumentArray[2]) && isValidInteger(argumentArray[3])
+    return argumentArray != null && argumentArray.length == CORRECT_ARRAY_LENGTH
+            && isValidDouble(argumentArray[2]) && isValidInteger(argumentArray[3])
             && isValidBoolean(argumentArray[4]);
   }
 
   private static boolean isValidInteger(String value) {
-    return value != null && value.matches("[0-9]+");
+    return value != null
+            && value.matches("[0-9]+");
   }
 
   private static boolean isValidDouble(String value) {
-    return value != null && value.matches("\\d+(\\.\\d+)?");
+    return value != null
+            && value.matches("\\d+(\\.\\d+)?");
   }
 
   private static boolean isValidBoolean(String value) {

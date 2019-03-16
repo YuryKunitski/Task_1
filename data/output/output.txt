@@ -1,0 +1,6 @@
+EquipmentHomeCatalog:
+Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+MultiCooker:firmName=Tefal, price=250.0, power=1000, working=true, volume=8.0, numbPrograms=22
+Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+Computer:firmName=Aser, price=500.0, power=300, working=true, sizeDisplay=18, ram=2048

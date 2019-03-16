@@ -1,0 +1,763 @@
+2019-03-14 21:55:20 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-14 21:55:20 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-14 21:55:20 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-14 21:55:20 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-14 21:55:20 INFO  root:15 - General power - 5300
+
+2019-03-14 22:26:11 INFO  root:15 - the end of method - findMaxPower
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-14 22:26:11 INFO  root:15 - the end of method - findMaxPrice
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-14 22:26:11 INFO  root:15 - the end of method - findMinPrice
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-14 22:26:11 INFO  root:15 - the end of method - findFirmName
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-14 22:26:11 INFO  root:15 - method - getArray - work with Array
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - the end of method - calcSumPower
+2019-03-14 22:26:11 INFO  root:15 - General power - 5300
+
+2019-03-14 22:26:11 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-14 22:26:11 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:47:10 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:47:10 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:47:10 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:47:10 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:47:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:47:10 INFO  root:15 - General power - 5300
+
+2019-03-15 12:47:10 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:47:10 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:52:15 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:52:15 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:52:15 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:52:15 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:52:15 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:52:15 INFO  root:15 - General power - 10600
+
+2019-03-15 12:52:15 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:52:15 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:54:35 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:54:35 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:54:35 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:54:35 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:54:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:54:35 INFO  root:15 - General power - 10600
+
+2019-03-15 12:54:35 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:54:35 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:56:10 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:56:10 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:56:10 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:56:10 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:56:10 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:56:10 INFO  root:15 - General power - 10600
+
+2019-03-15 12:56:10 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:56:10 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:57:33 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:57:33 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:57:33 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:57:33 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:33 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:57:33 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:57:34 INFO  root:15 - General power - 10600
+
+2019-03-15 12:57:34 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:57:34 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 12:58:49 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 12:58:49 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 12:58:49 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 12:58:49 INFO  root:15 - the end of method - findFirmName
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 12:58:49 INFO  root:15 - method - getArray - work with Array
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 12:58:49 INFO  root:15 - General power - 10600
+
+2019-03-15 12:58:50 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 12:58:50 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 13:01:54 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 13:01:54 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 13:01:54 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 13:01:54 INFO  root:15 - the end of method - findFirmName
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 13:01:54 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 13:01:54 INFO  root:15 - General power - 10600
+
+2019-03-15 13:01:54 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 13:01:54 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 13:02:35 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 13:02:35 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 13:02:35 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 13:02:35 INFO  root:15 - the end of method - findFirmName
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 13:02:35 INFO  root:15 - method - getArray - work with Array
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 13:02:35 INFO  root:15 - General power - 5300
+
+2019-03-15 13:02:35 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 13:02:35 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 16:09:58 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:09:58 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:09:58 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:09:58 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:09:58 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:09:58 INFO  root:15 - General power - 10600
+
+2019-03-15 16:17:09 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:17:09 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:17:09 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:17:09 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:17:09 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:17:09 INFO  root:15 - General power - 10600
+
+2019-03-15 16:26:07 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:26:07 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:26:07 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:26:07 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:26:07 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:26:07 INFO  root:15 - General power - 10600
+
+2019-03-15 16:27:21 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:27:21 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:27:21 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:27:21 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:27:21 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:27:21 INFO  root:15 - General power - 5300
+
+2019-03-15 16:28:42 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:28:42 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:28:42 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:28:42 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:28:42 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:28:42 INFO  root:15 - General power - 5300
+
+2019-03-15 16:29:27 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:29:27 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:29:27 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:29:27 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:29:27 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:29:27 INFO  root:15 - General power - 5300
+
+2019-03-15 16:30:04 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:30:04 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:30:04 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:30:04 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:30:04 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:30:04 INFO  root:15 - General power - 5300
+
+2019-03-15 16:30:04 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 16:30:04 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 16:30:32 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 16:30:32 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 16:30:32 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 16:30:32 INFO  root:15 - the end of method - findFirmName
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 16:30:32 INFO  root:15 - method - getArray - work with Array
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 16:30:32 INFO  root:15 - General power - 5300
+
+2019-03-15 16:30:32 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 16:30:32 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 18:00:41 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 18:00:41 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 18:00:41 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 18:00:41 INFO  root:15 - the end of method - findFirmName
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 18:00:41 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 18:00:41 INFO  root:15 - General power - 5300
+
+2019-03-15 18:00:42 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 18:00:42 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 18:11:50 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 18:11:50 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 18:11:50 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 18:11:50 INFO  root:15 - the end of method - findFirmName
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 18:11:50 INFO  root:15 - method - getArray - work with Array
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 18:11:50 INFO  root:15 - General power - 5300
+
+2019-03-15 18:11:50 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 18:11:50 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 19:10:03 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 19:10:03 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 19:10:03 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 19:10:03 INFO  root:15 - the end of method - findFirmName
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 19:10:03 INFO  root:15 - method - getArray - work with Array
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 19:10:03 INFO  root:15 - General power - 5300
+
+2019-03-15 19:10:03 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 19:10:03 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-15 21:11:59 INFO  root:15 - the end of method - findMaxPower
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-15 21:11:59 INFO  root:15 - the end of method - findMaxPrice
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - Equipment with max price - Tv:firmName=Sumsung, price=1200.0, power=800, working=true, sizeDisplay=52, TypeTV=ZALA
+
+2019-03-15 21:11:59 INFO  root:15 - the end of method - findMinPrice
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-15 21:11:59 INFO  root:15 - the end of method - findFirmName
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-15 21:11:59 INFO  root:15 - method - getArray - work with Array
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - the end of method - calcSumPower
+2019-03-15 21:11:59 INFO  root:15 - General power - 5300
+
+2019-03-15 21:12:00 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-15 21:12:00 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-16 13:29:13 INFO  root:15 - the end of method - findMaxPower
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - Equipment with max power - Microwave:firmName=Atlant, price=250.0, power=1500, working=false, volume=17.5, touchControl=true
+
+2019-03-16 13:29:13 INFO  root:15 - the end of method - findMaxPrice
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - Equipment with max price - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-16 13:29:13 INFO  root:15 - the end of method - findMinPrice
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - Equipment with min price - Kettle:firmName=Tefal, price=50.0, power=800, working=true, volume=1.8, minWaterLevel=0.3
+
+2019-03-16 13:29:13 INFO  root:15 - the end of method - findFirmName
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - Equipment with firm name: LG - Computer:firmName=LG, price=1000.0, power=500, working=true, sizeDisplay=22, ram=1024
+
+2019-03-16 13:29:13 INFO  root:15 - method - getArray - work with Array
+2019-03-16 13:29:13 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - the end of method - calcSumPower
+2019-03-16 13:29:13 INFO  root:15 - General power - 4100
+
+2019-03-16 13:29:14 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-16 13:29:14 INFO  root:15 - method - sortPowerEquipment - work with Array

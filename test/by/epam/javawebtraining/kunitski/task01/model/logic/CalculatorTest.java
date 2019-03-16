@@ -6,7 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.TV.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
@@ -18,14 +18,14 @@ public class CalculatorTest {
     Equipment e1 = new Kettle("LG", 100, 1000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 100, 1000, false, 2, true);
     Equipment e3 = new MultiCooker("LG", 100, 1000, true, 2, 24);
-    Equipment e4 = new Tv("LG", 100, 1000, true, 2, ZALA);
+    Equipment e4 = new TV("LG", 100, 1000, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 100, 1000, true, 2, 2048);
 
-    home.getEquipmentHomeCatalog().addEquipment(e1);
-    home.getEquipmentHomeCatalog().addEquipment(e2);
-    home.getEquipmentHomeCatalog().addEquipment(e3);
-    home.getEquipmentHomeCatalog().addEquipment(e4);
-    home.getEquipmentHomeCatalog().addEquipment(e5);
+    home.addEquipment(e1);
+    home.addEquipment(e2);
+    home.addEquipment(e3);
+    home.addEquipment(e4);
+    home.addEquipment(e5);
 
   }
 
@@ -78,7 +78,7 @@ public class CalculatorTest {
   @Test
   public void calcWiewingPower() {
 
-    int actual = Calculator.calcWiewingPower(home);
+    int actual = Calculator.calcViewingPower(home);
     int expected = 2000;
     assertEquals(expected, actual);
   }
@@ -86,7 +86,7 @@ public class CalculatorTest {
   @Test
   public void calcWiewingPowerByNull() {
 
-    int actual = Calculator.calcWiewingPower(home = null);
+    int actual = Calculator.calcViewingPower(home = null);
     int expected = 0;
     assertEquals(expected, actual);
   }

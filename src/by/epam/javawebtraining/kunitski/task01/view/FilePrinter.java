@@ -6,18 +6,19 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class FilePrinter implements Printable {
+
   private FileOutputStream fos;
-  private String OUTPUT_PATH;
+  private String outputPath;
 
   public FilePrinter(String output_path) {
-    OUTPUT_PATH = output_path;
+    outputPath = output_path;
   }
 
   @Override
   public void print(Object massage) {
     try {
       try {
-        FileOutputStream fos = new FileOutputStream(OUTPUT_PATH);
+        FileOutputStream fos = new FileOutputStream(outputPath);
         byte[] bytes = massage.toString().getBytes();
         fos.write(bytes);
         fos.flush();
@@ -27,6 +28,7 @@ public class FilePrinter implements Printable {
       }
     } catch (WrongOutputPathTechnicalException e) {
       System.out.println(e);
+      LogPrinter.LOGGER.error(e);
     }
   }
 }

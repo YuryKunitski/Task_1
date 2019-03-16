@@ -40,27 +40,33 @@ public class EquipmentArray implements EquipmentCollection<Equipment[]> {
   }
 
   @Override
+  public boolean isEmpty() {
+    return size() == 0;
+  }
+
+  @Override
   public Equipment[] getEquipment() {
     return equipmentArray;
   }
 
   @Override
-  public Equipment getEquipment(int index) throws WrongIndexHomeException {
-    if (index < 0 || index >= length) {
+  public Equipment get(int index) throws WrongIndexHomeException {
+    if (index >= 0 && index < length) {
+      return equipmentArray[index];
+    } else {
       throw new WrongIndexHomeException("Incorrect index");
     }
-    return equipmentArray[index];
   }
 
   @Override
-  public void setEquipment(int index, Equipment other) {
+  public void set(int index, Equipment other) {
     if (index >= 0 && index < length && other != null)
       equipmentArray[index] = other;
 
   }
 
   @Override
-  public void addEquipment(Equipment otherEquipment) {
+  public void add(Equipment otherEquipment) {
     if (otherEquipment != null) {
       if (currentIndex >= length) {
         equipmentArray = Arrays.copyOf(equipmentArray, ++length);
@@ -71,7 +77,7 @@ public class EquipmentArray implements EquipmentCollection<Equipment[]> {
   }
 
   @Override
-  public void removeEquipment(Equipment oldEquipment) {
+  public void remove(Equipment oldEquipment) {
     if (oldEquipment != null) {
 
       for (int i = 0; i < length; i++) {
@@ -84,8 +90,8 @@ public class EquipmentArray implements EquipmentCollection<Equipment[]> {
   }
 
   @Override
-  public void removeEquipment(int index) {
-    if (index >= 0) {
+  public void remove(int index) {
+    if (index >= 0 && index < length) {
       fastRemove(index);
     }
   }
