@@ -13,15 +13,13 @@ public class Reader {
 
   public static String readFromFile(String dataPath) throws WrongDataPathTechnicalException {
 
-    Scanner scanner = null;
     StringBuilder stringBuilder = new StringBuilder();
-    String lineSeparator = "\n";
 
     if (dataPath != null) {
       try {
-        scanner = new Scanner(new FileInputStream(dataPath));
+        Scanner scanner = new Scanner(new FileInputStream(dataPath));
         while (scanner.hasNextLine()) {
-          stringBuilder.append(scanner.nextLine()).append(lineSeparator);
+          stringBuilder.append(scanner.nextLine()).append("\n");
         }
       } catch (FileNotFoundException e){
           throw new WrongDataPathTechnicalException(e);

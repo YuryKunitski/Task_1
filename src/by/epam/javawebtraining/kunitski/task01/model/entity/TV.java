@@ -2,7 +2,7 @@ package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongTVTypeLogicException;
 
-public class Tv extends ViewingEquipment {
+public class TV extends ViewingEquipment { //rename
 
   private TVType tvType;
 
@@ -10,15 +10,15 @@ public class Tv extends ViewingEquipment {
     COSMOSTV, ZALA, VOKATV, BELTELECOM
   }
 
-  public Tv() {
+  public TV() {
   }
 
-  public Tv(String firmName, double price, int power, boolean working, int sizeDisplay, TVType tvType) {
+  public TV(String firmName, double price, int power, boolean working, int sizeDisplay, TVType tvType) {
     super(firmName, price, power, working, sizeDisplay);
     this.tvType = tvType;
   }
 
-  public Tv(Tv other) {
+  public TV(TV other) {
     tvType = other.tvType;
   }
 
@@ -40,9 +40,9 @@ public class Tv extends ViewingEquipment {
     if (o == null || getClass() != o.getClass()) return false;
     if (!super.equals(o)) return false;
 
-    Tv tv = (Tv) o;
+    TV TV = (TV) o;
 
-    return tvType == tv.tvType;
+    return tvType == TV.tvType;
   }
 
   @Override

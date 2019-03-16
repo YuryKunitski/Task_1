@@ -18,7 +18,7 @@ public class Home {
     equipmentHomeCatalog = equipmentList;
   }
 
-  public Home(Home other) {
+  public Home(Home other) { //rebuild
     if (other != null) {
       equipmentHomeCatalog = other.equipmentHomeCatalog;
     }

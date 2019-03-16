@@ -8,7 +8,7 @@ import by.epam.javawebtraining.kunitski.task01.model.logic.finder.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.TV.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class EquipmentFinderTest {
@@ -25,7 +25,7 @@ public class EquipmentFinderTest {
     Equipment e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 300, 2000, false, 2, true);
     Equipment e3 = new MultiCooker("LG", 400, 1500, true, 2, 24);
-    Equipment e4 = new Tv("Sumsung", 2000, 1800, true, 2, ZALA);
+    Equipment e4 = new TV("Sumsung", 2000, 1800, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
     home.addEquipment(e1);
@@ -39,7 +39,7 @@ public class EquipmentFinderTest {
   @Test
   public void findMaxPrice() throws NullHomeLogicException {
     Equipment actual = EquipmentFinder.findMaxPrice(home);
-    Equipment expected = new Tv("Sumsung", 2000, 1800, true, 2, ZALA);
+    Equipment expected = new TV("Sumsung", 2000, 1800, true, 2, ZALA);
     assertEquals(expected, actual);
   }
 
@@ -139,7 +139,7 @@ public class EquipmentFinderTest {
   @Test
   public void findNeedFirmName() {
     Equipment actual = EquipmentFinder.findFirmName(home, "Sumsung");
-    Equipment expected = new Tv("Sumsung", 2000, 1800, true, 2, ZALA);
+    Equipment expected = new TV("Sumsung", 2000, 1800, true, 2, ZALA);
     assertEquals(expected, actual);
   }
 

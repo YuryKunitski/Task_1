@@ -6,7 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.TV.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class SortTest {
@@ -29,7 +29,7 @@ public class SortTest {
     e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     e2 = new Microwave("LG", 300, 2000, false, 2, true);
     e3 = new MultiCooker("LG", 400, 1500, true, 2, 24);
-    e4 = new Tv("Sumsung", 100, 1800, true, 2, ZALA);
+    e4 = new TV("Sumsung", 100, 1800, true, 2, ZALA);
     e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
     homeListActual.addEquipment(e1);

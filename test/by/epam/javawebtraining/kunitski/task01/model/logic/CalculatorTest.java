@@ -6,7 +6,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
 import org.junit.Test;
 
-import static by.epam.javawebtraining.kunitski.task01.model.entity.Tv.TVType.ZALA;
+import static by.epam.javawebtraining.kunitski.task01.model.entity.TV.TVType.ZALA;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
@@ -18,7 +18,7 @@ public class CalculatorTest {
     Equipment e1 = new Kettle("LG", 100, 1000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 100, 1000, false, 2, true);
     Equipment e3 = new MultiCooker("LG", 100, 1000, true, 2, 24);
-    Equipment e4 = new Tv("LG", 100, 1000, true, 2, ZALA);
+    Equipment e4 = new TV("LG", 100, 1000, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 100, 1000, true, 2, 2048);
 
     home.addEquipment(e1);

@@ -65,14 +65,14 @@ public class ValidatorTest {
 
   @Test
   public void isValidTvTrue() {
-    String[] expected = new String[]{ "Tv", "Tefal", "50.0", "800", "true", "18", "ZALA"};
+    String[] expected = new String[]{ "TV", "Tefal", "50.0", "800", "true", "18", "ZALA"};
     assertEquals(expectedTrue, Validator.isValidTv(expected));
 
   }
 
   @Test
   public void isValidTvFalse() {
-    String[] expected = new String[]{ "Tv", "Tefal", "50.0", "800", "true", "18", "text"};
+    String[] expected = new String[]{ "TV", "Tefal", "50.0", "800", "true", "18", "text"};
     assertEquals(expectedFalse, Validator.isValidTv(expected));
 
   }

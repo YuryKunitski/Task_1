@@ -128,10 +128,10 @@ public class Parser {
 
 
   private void tvParser(String[] dataLines) throws LogicException {
-    Tv tv = null;
+    TV tv = null;
 
     for (String s : dataLines) {
-      if (s.contains("Tv") && Validator.isValidTv(argumentArray = s.split(" "))) {
+      if (s.contains("TV") && Validator.isValidTv(argumentArray = s.split(" "))) {
 
         creator = new TvCreator();
 
@@ -149,7 +149,7 @@ public class Parser {
     }
   }
 
-  private Tv.TVType parserTvType(String value) {
-    return Tv.TVType.valueOf(value.toUpperCase());
+  private TV.TVType parserTvType(String value) {
+    return TV.TVType.valueOf(value.toUpperCase());
   }
 }
