@@ -1,88 +1,44 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity.home;
 
-import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException;
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
-import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
-import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArrayQueue;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 
 public class Home {
 
-  private EquipmentCollection equipmentHomeCatalog;
+  private EquipmentList equipmentHomeCatalog;
 
-  public Home() {
-    equipmentHomeCatalog = new EquipmentArray();
+  public Home(){
+    equipmentHomeCatalog = new EquipmentArrayQueue(); ////////////////////////
   }
 
-  public Home(EquipmentCollection equipmentList) {
+  public Home(EquipmentList equipmentList) {
     equipmentHomeCatalog = equipmentList;
   }
 
-  public Home(Home other) { //rebuild
-    if (other != null) {
+  public Home(Home other){
+    if (other != null){
       equipmentHomeCatalog = other.equipmentHomeCatalog;
     }
   }
+//
+//  public void addEquipment(Equipment e){
+//    equipmentHomeCatalog.add(e);
+//  }
 
-  public int size(){
-    return equipmentHomeCatalog.size();
-  }
-
-
-  public boolean isEmpty() {
-    return equipmentHomeCatalog.isEmpty();
-  }
-
-  public void addEquipment(Equipment equipment){
-    equipmentHomeCatalog.add(equipment);
-  }
-
-  public EquipmentCollection getEquipmentHomeCatalog() {
+  public EquipmentList getEquipmentHomeCatalog() {
     return equipmentHomeCatalog;
-  }
-
-  public Equipment getEquipmentHomeCatalog(int index) throws WrongIndexHomeException {
-    return equipmentHomeCatalog.get(index);
-  }
-
-  public void setEquipmentHomeCatalog(int index, Equipment other) {
-    equipmentHomeCatalog.set(index, other);
-  }
-
-  public void removeEquipment(Equipment oldEquipment){
-    equipmentHomeCatalog.remove(oldEquipment);
-  }
-
-  public void remove(int index){
-    equipmentHomeCatalog.remove(index);
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-
-    Home home = (Home) o;
-
-    return equipmentHomeCatalog != null ? equipmentHomeCatalog.equals(home.equipmentHomeCatalog) : home.equipmentHomeCatalog == null;
-  }
-
-  @Override
-  public int hashCode() {
-    return equipmentHomeCatalog != null ? equipmentHomeCatalog.hashCode() : 0;
   }
 
   @Override
   public String toString() {
     StringBuilder result = new StringBuilder("EquipmentHomeCatalog:\n");
-    try {
+//    try {
       for (int i = 0; i < equipmentHomeCatalog.size(); i++) {
         result.append(String.valueOf(equipmentHomeCatalog.get(i))).append("\n");
       }
-    } catch (WrongIndexHomeException e) {
-      System.out.println(e);
-      LogPrinter.LOGGER.error(e);
-    }
+//    }catch (WrongIndexHomeException e) {
+//      System.out.println(e);
+//    }
     return result.toString();
   }
 }

@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArrayQueue;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
@@ -14,18 +14,18 @@ public class CalculatorTest {
 
   @Before
   public void initialization() {
-    home = new Home(new EquipmentList());
+    home = new Home(new EquipmentArrayQueue());
     Equipment e1 = new Kettle("LG", 100, 1000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 100, 1000, false, 2, true);
     Equipment e3 = new MultiCooker("LG", 100, 1000, true, 2, 24);
     Equipment e4 = new TV("LG", 100, 1000, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 100, 1000, true, 2, 2048);
 
-    home.addEquipment(e1);
-    home.addEquipment(e2);
-    home.addEquipment(e3);
-    home.addEquipment(e4);
-    home.addEquipment(e5);
+    home.getEquipmentHomeCatalog().add(e1);
+    home.getEquipmentHomeCatalog().add(e2);
+    home.getEquipmentHomeCatalog().add(e3);
+    home.getEquipmentHomeCatalog().add(e4);
+    home.getEquipmentHomeCatalog().add(e5);
 
   }
 

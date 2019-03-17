@@ -1,9 +1,9 @@
-package by.epam.javawebtraining.kunitski.task01.data;
+package by.epam.javawebtraining.kunitski.task01.util;
 
 import by.epam.javawebtraining.kunitski.task01.exception.LogicException;
 import by.epam.javawebtraining.kunitski.task01.exception.TechnicalException;
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArrayQueue;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.util.creator.*;
 import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
@@ -11,10 +11,10 @@ import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 public class Parser {
 
   private String[] argumentArray;
-  private EquipmentCollection equipmentArray = new EquipmentArray();
+  private EquipmentList equipmentArray = new EquipmentArrayQueue();
   private AbstractCreator creator;
 
-  public EquipmentCollection totalEquipmentList(String dataPath) {
+  public EquipmentList totalEquipmentList(String dataPath) {
 
     try {
       String[] dataLines = Reader.readFromFile(dataPath).split("\n");

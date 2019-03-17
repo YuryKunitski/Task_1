@@ -2,7 +2,7 @@ package by.epam.javawebtraining.kunitski.task01.model.container;
 
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
-public interface StackEquipment extends ListEquipment { // Cloneable, Serializable, RandomAccess
+public interface EquipmentStack extends EquipmentList { // Cloneable, Serializable, RandomAccess
 
   Equipment push(Equipment e); //add element to stack
 

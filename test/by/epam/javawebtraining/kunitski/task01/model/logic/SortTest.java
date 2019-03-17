@@ -1,6 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArrayQueue;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import org.junit.Before;
@@ -23,8 +23,8 @@ public class SortTest {
   @Before
   public void initialization() {
 
-    homeListActual = new Home(new EquipmentList());
-    homeListExpected = new Home(new EquipmentList());
+    homeListActual = new Home(new EquipmentArrayQueue());
+    homeListExpected = new Home(new EquipmentArrayQueue());
 
     e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     e2 = new Microwave("LG", 300, 2000, false, 2, true);
@@ -32,21 +32,21 @@ public class SortTest {
     e4 = new TV("Sumsung", 100, 1800, true, 2, ZALA);
     e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
-    homeListActual.addEquipment(e1);
-    homeListActual.addEquipment(e2);
-    homeListActual.addEquipment(e3);
-    homeListActual.addEquipment(e4);
-    homeListActual.addEquipment(e5);
+    homeListActual.getEquipmentHomeCatalog().add(e1);
+    homeListActual.getEquipmentHomeCatalog().add(e2);
+    homeListActual.getEquipmentHomeCatalog().add(e3);
+    homeListActual.getEquipmentHomeCatalog().add(e4);
+    homeListActual.getEquipmentHomeCatalog().add(e5);
   }
 
   @Test
   public void sortPowerEquipment() {
 
-    homeListExpected.addEquipment(e5);
-    homeListExpected.addEquipment(e3);
-    homeListExpected.addEquipment(e4);
-    homeListExpected.addEquipment(e2);
-    homeListExpected.addEquipment(e1);
+    homeListExpected.getEquipmentHomeCatalog().add(e5);
+    homeListExpected.getEquipmentHomeCatalog().add(e3);
+    homeListExpected.getEquipmentHomeCatalog().add(e4);
+    homeListExpected.getEquipmentHomeCatalog().add(e2);
+    homeListExpected.getEquipmentHomeCatalog().add(e1);
 
     Sort.sortPowerEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);
@@ -55,11 +55,11 @@ public class SortTest {
   @Test
   public void sortPriceEquipment() {
 
-    homeListExpected.addEquipment(e1);
-    homeListExpected.addEquipment(e4);
-    homeListExpected.addEquipment(e2);
-    homeListExpected.addEquipment(e3);
-    homeListExpected.addEquipment(e5);
+    homeListExpected.getEquipmentHomeCatalog().add(e1);
+    homeListExpected.getEquipmentHomeCatalog().add(e4);
+    homeListExpected.getEquipmentHomeCatalog().add(e2);
+    homeListExpected.getEquipmentHomeCatalog().add(e3);
+    homeListExpected.getEquipmentHomeCatalog().add(e5);
 
     Sort.sortPriceEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);
@@ -68,11 +68,11 @@ public class SortTest {
   @Test
   public void sortPricePowerEquipment() {
 
-    homeListExpected.addEquipment(e4);
-    homeListExpected.addEquipment(e1);
-    homeListExpected.addEquipment(e2);
-    homeListExpected.addEquipment(e3);
-    homeListExpected.addEquipment(e5);
+    homeListExpected.getEquipmentHomeCatalog().add(e4);
+    homeListExpected.getEquipmentHomeCatalog().add(e1);
+    homeListExpected.getEquipmentHomeCatalog().add(e2);
+    homeListExpected.getEquipmentHomeCatalog().add(e3);
+    homeListExpected.getEquipmentHomeCatalog().add(e5);
 
     Sort.sortPricePowerEquipment(homeListActual);
     assertEquals(homeListExpected, homeListActual);

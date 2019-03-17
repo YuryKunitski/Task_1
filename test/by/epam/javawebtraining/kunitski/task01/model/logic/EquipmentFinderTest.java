@@ -1,7 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.logic;
 
 import by.epam.javawebtraining.kunitski.task01.exception.NullHomeLogicException;
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentList;
+import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArrayQueue;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.model.logic.finder.*;
@@ -20,7 +20,7 @@ public class EquipmentFinderTest {
   @Before
   public void initialization() {
 
-    home = new Home(new EquipmentList());
+    home = new Home(new EquipmentArrayQueue());
 
     Equipment e1 = new Kettle("LG", 100, 3000, false, 2, 0.3);
     Equipment e2 = new Microwave("LG", 300, 2000, false, 2, true);
@@ -28,11 +28,11 @@ public class EquipmentFinderTest {
     Equipment e4 = new TV("Sumsung", 2000, 1800, true, 2, ZALA);
     Equipment e5 = new Computer("LG", 1000, 500, true, 2, 2048);
 
-    home.addEquipment(e1);
-    home.addEquipment(e2);
-    home.addEquipment(e3);
-    home.addEquipment(e4);
-    home.addEquipment(e5);
+    home.getEquipmentHomeCatalog().add(e1);
+    home.getEquipmentHomeCatalog().add(e2);
+    home.getEquipmentHomeCatalog().add(e3);
+    home.getEquipmentHomeCatalog().add(e4);
+    home.getEquipmentHomeCatalog().add(e5);
 
   }
 

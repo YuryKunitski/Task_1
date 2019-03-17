@@ -761,3 +761,27 @@
 
 2019-03-16 13:29:14 INFO  root:15 - method - sortPricePowerEquipment - work with Array
 2019-03-16 13:29:14 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-16 19:25:56 ERROR root:31 - by.epam.javawebtraining.kunitski.task01.exception.WrongOutputPathTechnicalException: java.io.FileNotFoundException: output\output.txt (Системе не удается найти указанный путь)
+2019-03-16 19:25:57 INFO  root:15 - the end of method - findMaxPower
+2019-03-16 19:25:57 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:25:57 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:25:57 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:25:57 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:25:57 INFO  root:15 - the end of method - calcSumPower
+2019-03-16 19:25:57 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-16 19:25:57 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-16 19:26:18 ERROR root:29 - by.epam.javawebtraining.kunitski.task01.exception.WrongDataPathTechnicalException: java.io.FileNotFoundException: input\data.txt (Системе не удается найти указанный путь)
+2019-03-16 19:26:18 ERROR root:31 - by.epam.javawebtraining.kunitski.task01.exception.WrongOutputPathTechnicalException: java.io.FileNotFoundException: output\output.txt (Системе не удается найти указанный путь)
+2019-03-16 19:26:18 INFO  root:15 - the end of method - findMaxPower
+2019-03-16 19:26:18 INFO  root:15 - the end of method - calcSumPower
+2019-03-16 19:26:18 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-16 19:26:18 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-16 19:27:19 INFO  root:15 - the end of method - findMaxPower
+2019-03-16 19:27:19 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - loop iteration in method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - the end of method - calcSumPower
+2019-03-16 19:27:19 INFO  root:15 - method - sortPricePowerEquipment - work with Array
+2019-03-16 19:27:19 INFO  root:15 - method - sortPowerEquipment - work with Array
