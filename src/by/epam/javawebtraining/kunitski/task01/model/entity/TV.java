@@ -1,8 +1,9 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongTVTypeLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
-public class TV extends ViewingEquipment { //rename
+public class TV extends ViewingEquipment {
 
   private TVType tvType;
 
@@ -54,8 +55,8 @@ public class TV extends ViewingEquipment { //rename
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":" + super.toString()
-            + ", TypeTV=" + tvType;
+    return EquipmentConsts.TV + ":" + super.toString()
+            + ", "+EquipmentConsts.TVTYPE +"=" + tvType;
   }
 }
 

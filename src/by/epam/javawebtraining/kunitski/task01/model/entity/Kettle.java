@@ -1,6 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongMinWaterLavelLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
 public class Kettle extends KitchenEquipment {
   private double minWaterLevel;
@@ -52,6 +53,7 @@ public class Kettle extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":" + super.toString() + ", minWaterLevel=" + minWaterLevel;
+    return EquipmentConsts.KETTLE + ":" + super.toString()
+            + ", "+EquipmentConsts.MINWATERLEVEL +"=" + minWaterLevel;
   }
 }

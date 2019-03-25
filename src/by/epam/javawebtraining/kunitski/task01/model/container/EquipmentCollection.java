@@ -3,10 +3,12 @@ package by.epam.javawebtraining.kunitski.task01.model.container;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
 
+import java.io.Serializable;
+
 /**
  * This a universal container for collection and array.
  */
-public interface EquipmentCollection<T> {
+public interface EquipmentCollection<T> extends Serializable {
 
    T getEquipment();
 

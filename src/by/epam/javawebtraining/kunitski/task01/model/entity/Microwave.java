@@ -1,5 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
+
 public class Microwave extends KitchenEquipment {
   private boolean touchControl;
 
@@ -45,6 +47,7 @@ public class Microwave extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":" + super.toString() + ", touchControl=" + touchControl;
+    return EquipmentConsts.MICROWAVE + ":" + super.toString()
+            + ", "+EquipmentConsts.TOUCHCONTROL +"=" + touchControl;
   }
 }

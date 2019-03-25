@@ -1,6 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongSizeDisplayLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
 /**
  * The base class for all viewing equipments.
@@ -53,6 +54,6 @@ public class ViewingEquipment extends Equipment {
 
   @Override
   public String toString() {
-    return super.toString() + ", sizeDisplay=" + sizeDisplay;
+    return super.toString() + ", " + EquipmentConsts.SIZEDISPLAY + "=" + sizeDisplay;
   }
 }

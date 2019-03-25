@@ -3,11 +3,14 @@ package by.epam.javawebtraining.kunitski.task01.model.entity;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongFirmNameLogicException;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongPowerLogicException;
 import by.epam.javawebtraining.kunitski.task01.exception.WrongPriceLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
+
+import java.io.Serializable;
 
 /**
  * The base class of my hierarchy.
  */
-public class Equipment {
+public class Equipment implements Serializable {
 
   private String firmName;
   private double price;
@@ -103,7 +106,8 @@ public class Equipment {
 
   @Override
   public String toString() {
-    return "firmName=" + firmName + ", price=" + price + ", power=" + power
-            + ", working=" + working;
+    return EquipmentConsts.FIRMNAME + "=" + firmName + ", " + EquipmentConsts.PRICE + "=" + price
+            + ", " + EquipmentConsts.POWER + "=" + power
+            + ", " + EquipmentConsts.WORKING + "=" + working;
   }
 }

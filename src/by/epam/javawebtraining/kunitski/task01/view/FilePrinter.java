@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class FilePrinter implements Printable {
 
-  private FileOutputStream fos;
   private String outputPath;
 
   public FilePrinter(String output_path) {

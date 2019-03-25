@@ -1,6 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongRAMLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
 public class Computer extends ViewingEquipment {
 
@@ -26,7 +27,7 @@ public class Computer extends ViewingEquipment {
   public void setRam(int ram) throws WrongRAMLogicException {
     if (ram > 0) {
       this.ram = ram;
-      }else {
+    } else {
       throw new WrongRAMLogicException("Incorrect value of ram");
     }
   }
@@ -51,6 +52,6 @@ public class Computer extends ViewingEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":"+  super.toString() + ", ram=" + ram;
+    return EquipmentConsts.COMPUTER + ":" + super.toString() + ", " + EquipmentConsts.RAM + "=" + ram;
   }
 }

@@ -4,9 +4,12 @@ import by.epam.javawebtraining.kunitski.task01.exception.WrongIndexHomeException
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray;
 import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
 import by.epam.javawebtraining.kunitski.task01.model.entity.Equipment;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 
-public class Home {
+import java.io.Serializable;
+
+public class Home implements Serializable {
 
   private EquipmentCollection equipmentHomeCatalog;
 
@@ -18,13 +21,20 @@ public class Home {
     equipmentHomeCatalog = equipmentList;
   }
 
-  public Home(Home other) { //rebuild
+  public Home(Home other) {
+    this();
     if (other != null) {
-      equipmentHomeCatalog = other.equipmentHomeCatalog;
+      try {
+        for (int i = 0; i < other.equipmentHomeCatalog.size(); i++) {
+          equipmentHomeCatalog.add(other.equipmentHomeCatalog.get(i));
+        }
+      } catch (WrongIndexHomeException e) {
+        LogPrinter.LOGGER.error(e);
+      }
     }
   }
 
-  public int size(){
+  public int size() {
     return equipmentHomeCatalog.size();
   }
 
@@ -33,7 +43,7 @@ public class Home {
     return equipmentHomeCatalog.isEmpty();
   }
 
-  public void addEquipment(Equipment equipment){
+  public void addEquipment(Equipment equipment) {
     equipmentHomeCatalog.add(equipment);
   }
 
@@ -49,11 +59,11 @@ public class Home {
     equipmentHomeCatalog.set(index, other);
   }
 
-  public void removeEquipment(Equipment oldEquipment){
+  public void removeEquipment(Equipment oldEquipment) {
     equipmentHomeCatalog.remove(oldEquipment);
   }
 
-  public void remove(int index){
+  public void remove(int index) {
     equipmentHomeCatalog.remove(index);
   }
 
@@ -74,7 +84,7 @@ public class Home {
 
   @Override
   public String toString() {
-    StringBuilder result = new StringBuilder("EquipmentHomeCatalog:\n");
+    StringBuilder result = new StringBuilder(EquipmentConsts.EQUIPMENTHOMECOTALOG + ":\n");
     try {
       for (int i = 0; i < equipmentHomeCatalog.size(); i++) {
         result.append(String.valueOf(equipmentHomeCatalog.get(i))).append("\n");

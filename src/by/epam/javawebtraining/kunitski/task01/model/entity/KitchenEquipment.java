@@ -1,6 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongVolumeLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
 /**
  * The base class for all kitchen equipments.
@@ -55,6 +56,6 @@ public class KitchenEquipment extends Equipment {
 
   @Override
   public String toString() {
-    return super.toString() + ", volume=" + volume;
+    return super.toString() + ", " + EquipmentConsts.VOLUME + "=" + volume;
   }
 }

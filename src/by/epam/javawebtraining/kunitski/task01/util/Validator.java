@@ -1,4 +1,4 @@
-package by.epam.javawebtraining.kunitski.task01.data;
+package by.epam.javawebtraining.kunitski.task01.util;
 
 /**
  * Validates the input data

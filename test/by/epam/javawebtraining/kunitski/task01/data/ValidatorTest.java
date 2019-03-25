@@ -1,5 +1,6 @@
 package by.epam.javawebtraining.kunitski.task01.data;
 
+import by.epam.javawebtraining.kunitski.task01.util.Validator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

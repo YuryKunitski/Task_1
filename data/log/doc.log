@@ -761,3 +761,13 @@
 
 2019-03-16 13:29:14 INFO  root:15 - method - sortPricePowerEquipment - work with Array
 2019-03-16 13:29:14 INFO  root:15 - method - sortPowerEquipment - work with Array
+2019-03-17 22:07:17 ERROR root:54 - java.lang.NullPointerException
+2019-03-17 22:09:44 ERROR root:54 - java.lang.NullPointerException
+2019-03-17 22:11:46 ERROR root:54 - java.lang.NullPointerException
+2019-03-17 22:12:20 ERROR root:54 - java.lang.NullPointerException
+2019-03-17 22:12:56 ERROR root:54 - java.lang.NullPointerException
+2019-03-25 19:51:01 ERROR root:19 - java.io.NotSerializableException: by.epam.javawebtraining.kunitski.task01.model.entity.home.Home
+2019-03-25 19:52:58 ERROR root:19 - java.io.NotSerializableException: by.epam.javawebtraining.kunitski.task01.model.entity.home.Home
+2019-03-25 19:52:58 ERROR root:34 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: by.epam.javawebtraining.kunitski.task01.model.entity.home.Home
+2019-03-25 19:54:43 ERROR root:19 - java.io.NotSerializableException: by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray
+2019-03-25 19:54:43 ERROR root:34 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: by.epam.javawebtraining.kunitski.task01.model.container.EquipmentArray

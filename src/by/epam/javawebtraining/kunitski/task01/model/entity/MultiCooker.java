@@ -1,6 +1,7 @@
 package by.epam.javawebtraining.kunitski.task01.model.entity;
 
 import by.epam.javawebtraining.kunitski.task01.exception.WrongNumbProgramsLogicException;
+import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 
 public class MultiCooker extends KitchenEquipment {
   private int numbPrograms;
@@ -50,6 +51,7 @@ public class MultiCooker extends KitchenEquipment {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + ":" + super.toString() + ", numbPrograms=" + numbPrograms;
+    return EquipmentConsts.MULTICOOKER + ":" + super.toString()
+            + ", "+EquipmentConsts.NUMBPROGRAMS +"=" + numbPrograms;
   }
 }
