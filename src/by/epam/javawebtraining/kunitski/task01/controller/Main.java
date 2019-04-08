@@ -26,7 +26,7 @@ public class Main {
 
       Home home = new Home(list);
 
-      EquipmentConsts.changeLocale(new Locale("ru","RU"));
+      EquipmentConsts.changeLocale(new Locale("en","US"));
 
       consolePrinter.print(home);
 

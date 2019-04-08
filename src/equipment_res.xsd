@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/equipments"
+        xmlns:tns="http://www.example.com/equipments"
+        elementFormDefault="qualified">
+
+
+    <element name="equipments">
+        <complexType>
+            <choice maxOccurs="unbounded">
+            <element ref="tns:KitchenEquipment"/>
+            <element ref="tns:ViewingEquipment"/>
+            <element ref="tns:Kettle"/>
+            <element ref="tns:Microwave"/>
+            <element ref="tns:MultiCooker"/>
+            <element ref="tns:Computer"/>
+            <element ref="tns:TV"/>
+            </choice>
+        </complexType>
+    </element>
+
+    <element name="KitchenEquipment" type="tns:KitchenEquipment"/>
+    <element name="ViewingEquipment" type="tns:ViewingEquipment"/>
+    <element name="Kettle" type="tns:Kettle"/>
+    <element name="Microwave" type="tns:Microwave"/>
+    <element name="MultiCooker" type="tns:MultiCooker"/>
+    <element name="Computer" type="tns:Computer"/>
+    <element name="TV" type="tns:TV"/>
+
+    <complexType name="Equipment">
+        <sequence>
+            <element name="firmName" type="string"/>
+            <element name="price" type="double"/>
+            <element name="power" type="positiveInteger"/>
+            <element name="working" type="boolean"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="KitchenEquipment">
+        <complexContent>
+            <extension base="tns:Equipment">
+                <sequence>
+                    <element name="volume" type="double"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="ViewingEquipment">
+        <complexContent>
+            <extension base="tns:Equipment">
+                <sequence>
+                    <element name="sizeDisplay" type="positiveInteger"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+        <complexType name="Kettle">
+            <complexContent>
+                <extension base="tns:KitchenEquipment">
+                    <sequence>
+                        <element name="minWaterLevel" type="double"/>
+                    </sequence>
+                </extension>
+            </complexContent>
+        </complexType>
+
+
+    <complexType name="Microwave">
+        <complexContent>
+            <extension base="tns:KitchenEquipment">
+                <sequence>
+                    <element name="touchControl" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="MultiCooker">
+        <complexContent>
+            <extension base="tns:KitchenEquipment">
+                <sequence>
+                    <element name="numbPrograms" type="positiveInteger"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Computer">
+        <complexContent>
+            <extension base="tns:ViewingEquipment">
+                <sequence>
+                    <element name="ram" type="positiveInteger"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="TV">
+        <complexContent>
+            <extension base="tns:ViewingEquipment">
+                <sequence>
+                    <element name="tvType">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="COSMOSTV"/>
+                                <enumeration value="ZALA"/>
+                                <enumeration value="VOKATV"/>
+                                <enumeration value="BELTELECOM"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+</schema>

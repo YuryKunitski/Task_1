@@ -1,0 +1,6 @@
+package by.epam.javawebtraining.kunitski.task01.utilxml.equipmentenum;
+
+public enum EquipmentEnum {
+  KETTLE, MICROWAVE, MULTICOOKER, COMPUTER, TV, FIRMNAME, PRICE, POWER, WORKING, VOLUME, SIZEDISPLAY, MINWATERLEVEL,
+  TOUCHCONTROL, NUMBPROGRAMS, RAM, TVTYPE, EQUIPMENTS;
+}

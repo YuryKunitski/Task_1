@@ -33,7 +33,7 @@ public class EquipmentConsts {
 
   public static void changeLocale(Locale locale) {
 
-    bundle = ResourceBundle.getBundle("localization.l10n", locale);
+    bundle = ResourceBundle.getBundle("localization.l10n_en_US", locale);
 
     EQUIPMENTHOMECOTALOG = bundle.getString("equipmentHomeCotalog");
     FIRMNAME = bundle.getString("firmName");
