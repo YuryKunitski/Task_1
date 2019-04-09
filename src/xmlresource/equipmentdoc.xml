@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://www.example.com/equipments"
+            xsi:schemaLocation="http://www.example.com/equipments equipmentschem.xsd">
+
+    <Kettle>
+        <firmName>Tefal</firmName>
+        <price>50.0</price>
+        <power>80</power>
+        <working>true</working>
+        <volume>1.8</volume>
+        <minWaterLevel>0.3</minWaterLevel>
+    </Kettle>
+
+    <Microwave>
+        <firmName>Atlant</firmName>
+        <price>250.0</price>
+        <power>1500</power>
+        <working>false</working>
+        <volume>17.5</volume>
+        <touchControl>true</touchControl>
+    </Microwave>
+
+    <MultiCooker>
+        <firmName>Tefal</firmName>
+        <price>250.0</price>
+        <power>1000</power>
+        <working>true</working>
+        <volume>8.0</volume>
+        <numbPrograms>22</numbPrograms>
+    </MultiCooker>
+
+    <Computer>
+        <firmName>LG</firmName>
+        <price>1000.0</price>
+        <power>500</power>
+        <working>true</working>
+        <sizeDisplay>22</sizeDisplay>
+        <ram>1024</ram>
+    </Computer>
+
+    <Computer>
+        <firmName>Aser</firmName>
+        <price>500.0</price>
+        <power>300</power>
+        <working>true</working>
+        <sizeDisplay>18</sizeDisplay>
+        <ram>2048</ram>
+    </Computer>
+
+    <TV>
+        <firmName>Sumsung</firmName>
+        <price>1200.0</price>
+        <power>800</power>
+        <working>true</working>
+        <sizeDisplay>52</sizeDisplay>
+        <tvType>VOKATV</tvType>
+    </TV>
+
+    <TV>
+        <firmName>Panasonic</firmName>
+        <price>500.0</price>
+        <power>400</power>
+        <working>false</working>
+        <sizeDisplay>32</sizeDisplay>
+        <tvType>ZALA</tvType>
+    </TV>
+
+</equipments>
