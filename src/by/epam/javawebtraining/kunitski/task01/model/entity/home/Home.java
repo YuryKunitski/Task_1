@@ -8,6 +8,7 @@ import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentC
 import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 public class Home implements Serializable {
 
@@ -15,6 +16,15 @@ public class Home implements Serializable {
 
   public Home() {
     equipmentHomeCatalog = new EquipmentArray();
+  }
+
+  public Home(Collection<Equipment> collection){
+    this();
+    if (collection != null) {
+      for (Equipment equipment : collection) {
+        equipmentHomeCatalog.add(equipment);
+      }
+    }
   }
 
   public Home(EquipmentCollection equipmentList) {
@@ -90,7 +100,6 @@ public class Home implements Serializable {
         result.append(String.valueOf(equipmentHomeCatalog.get(i))).append("\n");
       }
     } catch (WrongIndexHomeException e) {
-      System.out.println(e);
       LogPrinter.LOGGER.error(e);
     }
     return result.toString();

@@ -1,8 +1,10 @@
-package by.epam.javawebtraining.kunitski.task01.utilxml.domparser;
+package by.epam.javawebtraining.kunitski.task01.utilxml.parser;
 
 import by.epam.javawebtraining.kunitski.task01.exception.LogicException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
+import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.utilxml.equipmentenum.EquipmentEnum;
+import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,33 +18,36 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class EquipmentDOMParser {
+public class EquipmentDOMParser implements AbstractParser{
   private Set<Equipment> equipments;
   private DocumentBuilder docBuilder;
 
   public EquipmentDOMParser() {
     this.equipments = new HashSet<>();
-    // создание domparser-анализатора
+    // create domparser-analizator
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     try {
       docBuilder = factory.newDocumentBuilder();
     } catch (ParserConfigurationException e) {
-      System.err.println("Error configuration of parser: " + e);
+      LogPrinter.LOGGER.error("Error configuration of parser: " + e);
     }
   }
 
-  public Set<Equipment> getEquipments() {
-    return equipments;
+  @Override
+  public Home getHome() {
+    return new Home(equipments);
   }
 
-  public void buildSetEquipments(String fileName) {
+  @Override
+  public void buildEquipmentSet(String fileName) {
     Document doc = null;
     try {
-// parsing XML-документа и создание древовидной структуры
+// parsing XML-document and create tree structure
       doc = docBuilder.parse(fileName);
       Element root = doc.getDocumentElement();
-      // получение списка дочерних элементов <student>
-      NodeList equipmentList = root.getChildNodes(); ///?
+
+      //getting the list of daughter elements
+      NodeList equipmentList = root.getChildNodes();
 
       for (int i = 0; i < equipmentList.getLength(); i++) {
 
@@ -55,9 +60,9 @@ public class EquipmentDOMParser {
         }
       }
     } catch (IOException e) {
-      System.err.println("File error or I/O error: " + e);
+      LogPrinter.LOGGER.error("File error or I/O error: " + e);
     } catch (SAXException e) {
-      System.err.println("Parsing failure: " + e);
+      LogPrinter.LOGGER.error("Parsing failure: " + e);
     }
   }
 
@@ -65,7 +70,7 @@ public class EquipmentDOMParser {
     String elementName = equipmentElement.getNodeName();
     EquipmentEnum type = EquipmentEnum.valueOf(elementName.toUpperCase());
     Equipment equipment = null;
-    // заполнение объекта equipment
+    // filling equipment object
     try {
       switch (type) {
         case KETTLE: {
@@ -129,20 +134,12 @@ public class EquipmentDOMParser {
       }
 
     } catch (LogicException e) {
-      System.out.println(e);
+      LogPrinter.LOGGER.error("Exception in set method" + e);
     }
 
     return equipment;
   }
 
-  public static void main(String[] args) {
-    Set<Equipment> equipments = new HashSet<>();
-    EquipmentDOMParser domBuilder = new EquipmentDOMParser();
-    domBuilder.buildSetEquipments("src//equipment_res.xml");
-    for (Equipment equipment : domBuilder.getEquipments()){
-      System.out.println(equipment);
-    }
-  }
 }
 
 

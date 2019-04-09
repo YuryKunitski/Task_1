@@ -1,9 +1,10 @@
-package by.epam.javawebtraining.kunitski.task01.utilxml.staxparser;
+package by.epam.javawebtraining.kunitski.task01.utilxml.parser;
 
 import by.epam.javawebtraining.kunitski.task01.exception.LogicException;
 import by.epam.javawebtraining.kunitski.task01.model.entity.*;
-import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
+import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
 import by.epam.javawebtraining.kunitski.task01.utilxml.equipmentenum.EquipmentEnum;
+import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -15,10 +16,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.EnumSet;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Set;
 
-public class EquipmentStAXParser {
+public class EquipmentStAXParser implements AbstractParser {
   private Set<Equipment> equipments;
   private XMLInputFactory inputFactory;
   private EnumSet<EquipmentEnum> equipmentEnums;
@@ -30,10 +30,12 @@ public class EquipmentStAXParser {
     equipmentEnums = EnumSet.range(EquipmentEnum.KETTLE, EquipmentEnum.TV);
   }
 
-  public Set<Equipment> getEquipments() {
-    return equipments;
+  @Override
+  public Home getHome() {
+    return new Home(equipments);
   }
 
+  @Override
   public void buildEquipmentSet(String fileName) {
 
     FileInputStream inputStream = null;
@@ -57,16 +59,16 @@ public class EquipmentStAXParser {
         }
       }
     } catch (XMLStreamException ex) {
-      System.out.println("StAX parsing error! " + ex);
+      LogPrinter.LOGGER.error("StAX parsing error! " + ex);
     } catch (FileNotFoundException ex) {
-      System.out.println("File " + fileName + " not found! " + ex);
+      LogPrinter.LOGGER.error("File " + fileName + " not found! " + ex);
     } finally {
       try {
         if (inputStream != null) {
           inputStream.close();
         }
       } catch (IOException e) {
-        System.out.println("Impossible to close file " + fileName + " : " + e);
+        LogPrinter.LOGGER.error("Impossible to close file " + fileName + " : " + e);
       }
     }
   }
@@ -91,8 +93,6 @@ public class EquipmentStAXParser {
       return null;
     }
 
-//    item.setID(reader.getAttributeValue(null, ItemEnum.MODEL.getValue()));
-
     String name = "";
     try {
       while (reader.hasNext()) {
@@ -105,19 +105,19 @@ public class EquipmentStAXParser {
             switch (EquipmentEnum.valueOf(name.toUpperCase())) {
               case FIRMNAME:
                 equipment.setFirmName(getXMLText(reader));
-              break;
+                break;
 
               case PRICE:
                 equipment.setPrice(Double.parseDouble(getXMLText(reader)));
-              break;
+                break;
 
               case POWER:
                 equipment.setPower(Integer.parseInt(getXMLText(reader)));
-              break;
+                break;
 
               case WORKING:
                 equipment.setWorking(Boolean.parseBoolean(getXMLText(reader)));
-              break;
+                break;
 
               default:
                 if (equipment instanceof KitchenEquipment) {
@@ -126,7 +126,6 @@ public class EquipmentStAXParser {
                     kitchenEquipment.setVolume(Double.parseDouble(getXMLText(reader)));
                   }
                 }
-
 
                 if (equipment instanceof ViewingEquipment) {
                   viewingEquipment = (ViewingEquipment) equipment;
@@ -153,16 +152,12 @@ public class EquipmentStAXParser {
                   if (name.equalsIgnoreCase(EquipmentEnum.NUMBPROGRAMS.toString())) {
                     multiCooker.setNumbPrograms(Integer.parseInt(getXMLText(reader)));
                   }
-                }
-
-                else if (equipment instanceof Computer) {
+                } else if (equipment instanceof Computer) {
                   Computer computer = (Computer) viewingEquipment;
                   if (name.equalsIgnoreCase(EquipmentEnum.RAM.toString())) {
                     computer.setRam(Integer.parseInt(getXMLText(reader)));
                   }
-                }
-
-                else if (equipment instanceof TV) {
+                } else if (equipment instanceof TV) {
                   TV tv = (TV) viewingEquipment;
                   if (name.equalsIgnoreCase(EquipmentEnum.TVTYPE.toString())) {
                     tv.setTvType(TV.TVType.valueOf(getXMLText(reader)));
@@ -182,7 +177,7 @@ public class EquipmentStAXParser {
         }
       }
     } catch (LogicException e) {
-      System.out.println(e);
+      LogPrinter.LOGGER.error("Exception in set method"+e);
     }
     throw new XMLStreamException("Unknown element");
 
@@ -199,14 +194,5 @@ public class EquipmentStAXParser {
     return text;
   }
 
-  public static void main(String[] args) {
-    EquipmentStAXParser stAXParser = new EquipmentStAXParser();
-    stAXParser.buildEquipmentSet("src//equipment_res.xml");
-    for (Equipment equipment : stAXParser.getEquipments()){
-      System.out.println(equipment);
-    }
-
-  }
 
 }
-

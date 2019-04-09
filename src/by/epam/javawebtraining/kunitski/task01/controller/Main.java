@@ -1,34 +1,40 @@
 package by.epam.javawebtraining.kunitski.task01.controller;
 
-import by.epam.javawebtraining.kunitski.task01.model.container.EquipmentCollection;
-import by.epam.javawebtraining.kunitski.task01.model.entity.constants.EquipmentConsts;
 import by.epam.javawebtraining.kunitski.task01.model.entity.home.Home;
-import by.epam.javawebtraining.kunitski.task01.util.Parser;
-import by.epam.javawebtraining.kunitski.task01.view.ConsolePrinter;
+import by.epam.javawebtraining.kunitski.task01.utilxml.factory.ParserFactory;
+import by.epam.javawebtraining.kunitski.task01.utilxml.parser.AbstractParser;
+import by.epam.javawebtraining.kunitski.task01.utilxml.validator.ValidatorXML;
 import by.epam.javawebtraining.kunitski.task01.view.LogPrinter;
-import by.epam.javawebtraining.kunitski.task01.view.Printable;
-
-import java.util.Locale;
 
 public class Main {
 
   private static String outputPath = "data//output//output.txt";
   private static String inputPath = "data//input//data.txt";
   private static String serializPath = "data//serialization//equipment.bin";
+  private static String documentXMLPath = "src//xmlresource//equipmentdoc.xml";
+  private static String schemaXMLPath = "src//xmlresource//equipmentschem.xsd";
 
   public static void main(String[] args) {
 
-    Parser parser = new Parser();
-    Printable consolePrinter = new ConsolePrinter();
+    LogPrinter.LOGGER.info(ValidatorXML.validateXML(documentXMLPath, schemaXMLPath));
 
-    try {
-      EquipmentCollection list = parser.totalEquipmentList(inputPath);
+    ParserFactory factory = new ParserFactory();
+    AbstractParser parser = factory.createEquipmentParser("SAX");
+    parser.buildEquipmentSet(documentXMLPath);
+    Home home = parser.getHome();
+    LogPrinter.LOGGER.info(home);
 
-      Home home = new Home(list);
-
-      EquipmentConsts.changeLocale(new Locale("en","US"));
-
-      consolePrinter.print(home);
+//    Parser parser = new Parser();
+//    Printable consolePrinter = new ConsolePrinter();
+//
+//    try {
+//      EquipmentCollection list = parser.totalEquipmentList(inputPath);
+//
+//      Home home = new Home(list);
+//
+//      EquipmentConsts.changeLocale(new Locale("en","US"));
+//
+//      consolePrinter.print(home);
 
 //      EquipmentSerializator.write(home ,serializPath);
 
@@ -62,9 +68,9 @@ public class Main {
 //
 //      Sort.sortPowerEquipment(home);
 //      consolePrinter.print("Sorted by only power - " + home+"\n");
-    }
-    catch (Exception e) {
-      LogPrinter.LOGGER.error(e);
-    }
+//    }
+//    catch (Exception e) {
+//      LogPrinter.LOGGER.error(e);
+//    }
   }
 }
